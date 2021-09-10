@@ -1,0 +1,362 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Mainsite.master" AutoEventWireup="true" CodeFile="IndiaMapHighChart.aspx.cs" Inherits="IndiaMapHighChart" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+   
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentBanner" runat="Server">
+    <style>
+    .highcharts-credits {
+        display:none;
+    }
+    .highcharts-button-symbol {
+        display:none;
+    }
+        </style>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="contentbody" runat="Server">
+     <div>
+            
+           <%-- <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+            
+            <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+         
+            <script src="https://code.highcharts.com/maps/modules/drilldown.js"></script>--%>
+
+
+            <script src="<%=ResolveUrl("~/js/HighChart/1cdnjscloudflare.js") %>"></script>
+            
+            <script src="<%=ResolveUrl("~/js/HighChart/2codehighcharts.js") %>"></script>
+         
+            <script src="<%=ResolveUrl("~/js/HighChart/3codehighchartscom.js") %>"></script>
+        
+            <script src="India.js"></script>
+
+        </div>
+        <div id="container1">
+
+           <%-- <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />--%>
+            <link href='<%#ResolveUrl("~/js/HighChart/4netdnabootstrapcdn.css")%>' rel="stylesheet" type="text/css" />
+
+            <div id="container" style="height: 650px; min-width: 410px; max-width: 900px; margin: 0 auto"></div>
+            <script>
+               
+                
+                var datawb;
+                var nameSet;
+                var latSet;
+                var lonSet;
+                var drilldownSets;
+                var stateID;
+                var stateName;
+                var HcKey;
+
+               // var i = 1
+                function pointClick(e) {
+                   
+                    var a = e.point.name;
+                  
+                    var url = "<%=ResolveUrl("~/index.aspx?trname=") %>" + a + "&stateIDq=" + stateID + "&statename=" + stateName + "&hckey=" + HcKey;
+                    window.open(url, '_blank');
+                   
+                }
+                var data = Highcharts.geojson(Highcharts.maps['countries/in/in-all']),
+                    separators = Highcharts.geojson(Highcharts.maps['countries/in/in-all'], 'mapline'),
+                    // Some responsiveness
+                    small = $('#container').width() < 400;
+               // var datawb;
+                // Set drilldown pointers
+                $.each(data, function (i) {
+
+                    this['hc-key'] = this.properties['hc-key'];
+                    this['postal-code'] = this.properties['postal-code'];
+                    this.drilldown = this.properties['hc-key'];
+                    this.value = i; // Non-random bogus data
+
+                });
+
+                // Instantiate the map
+                Highcharts.mapChart('container', {
+
+                    chart: {
+                        events: {
+                            drilldown: function (e) {
+                                debugger;
+                                if (!e.seriesOptions) {
+                                    debugger;
+                                    var chart = this,
+                                        mapKey = 'countries/in/' + e.point.drilldown + '-all',
+                                     
+                                        dataall = function () {
+                                            debugger;
+                                            HcKey = mapKey;
+                                            if (e.point.name == 'Bihar')
+                                            {
+                                                stateName = e.point.name;
+                                                stateID = '5';
+                                                getTigerReserves(5);
+                                               var a =JSON.parse(datawb);
+                                               // alert(JSON.stringify(a));
+                                                datawb = a;
+
+                                                //datawb = [{
+                                                //    name: 'Palamau Tiger Reserve',
+                                                //    lat: 25.6853,
+                                                //    lon: 84.1456,
+                                                //    drilldown: 'dsd'
+                                                //}, {
+                                                //    name: 'Valmiki Tiger Reserve',
+                                                //    lat: 24.6853,
+                                                //    lon: 84.945,
+                                                //    drilldown: 'podspup'
+                                                //}]
+                                               
+                                            }
+                                            if (e.point.name == 'Delhi') {
+                                                stateName = e.point.name;
+                                                stateID = '9';
+                                                getTigerReserves(9);
+                                                var a = JSON.parse(datawb);
+                                                alert(JSON.stringify(a));
+                                                datawb = a;
+                                            }
+                                            if (e.point.name == 'Madhya Pradesh') {
+                                                stateName = e.point.name;
+                                                stateID = '23';
+                                                getTigerReserves(23);
+                                                var a = JSON.parse(datawb);
+                                                datawb = a;
+                                            }
+                                            if (e.point.name == 'Maharashtra') {
+                                                stateName = e.point.name;
+                                                stateID = '21';
+                                                getTigerReserves(21);
+                                                var a = JSON.parse(datawb);
+                                                datawb = a;
+                                            }
+                                            if (e.point.name == 'Jharkhand') {
+                                                stateName = e.point.name;
+                                                stateID = '16';
+                                                getTigerReserves(16);
+                                                var a = JSON.parse(datawb);
+                                                datawb = a;
+                                            }
+                                            if (e.point.name == 'Assam') {
+                                                stateName = e.point.name;
+                                                stateID = '4';
+                                                getTigerReserves(4);
+                                               
+                                                var a = JSON.parse(datawb);
+                                               
+                                                datawb = a;
+
+                                            }
+                                            if (e.point.name == 'Andaman and Nicobar') {
+                                                stateName = e.point.name;
+                                                stateID = '1';
+                                                getTigerReserves(1);
+                                                var a = JSON.parse(datawb);
+                                                datawb = a;
+                                            }
+                                            
+                                            
+                                        },
+                                        // Handle error, the timeout is cleared on success
+                                        fail = setTimeout(function () {
+                                            if (!Highcharts.maps[mapKey]) {
+                                                HcKey='';
+                                                chart.showLoading('<i class="icon-frown"></i> Failed loading ' + e.point.name);
+                                                fail = setTimeout(function () {
+                                                    chart.hideLoading();
+                                                }, 1000);
+                                            }
+                                        }, 3000);
+
+                                    // Show the spinner
+                                    chart.showLoading('<i class="icon-spinner icon-spin icon-3x"></i>'); // Font Awesome spinner
+                                    dataall();
+                                    // Load the drilldown map
+                                    $.getScript('India.js', function () {
+                                        debugger;
+                                        data = Highcharts.geojson(Highcharts.maps[mapKey]);
+
+                                        // Set a non-random bogus value
+                                        $.each(data, function (i) {
+                                            debugger;
+                                            this.value = i;
+                                        });
+
+                                        // Hide loading and add series
+                                        chart.hideLoading();
+                                        clearTimeout(fail);
+                                        chart.addSeriesAsDrilldown(e.point, {
+                                            name: e.point.name,
+                                            data: data,
+                                            dataLabels: {
+                                                enabled: true,
+                                                format: '{point.name}'
+                                            }
+
+                                        });
+
+                                        Highcharts.mapChart('container', {
+
+                                            chart: {
+                                                map: mapKey,
+                                                resetZoomButton: {
+                                                    theme: {
+                                                        display: 'none'
+                                                    }
+                                                }
+                                            },
+                                            tooltip: {
+                                                headerFormat: '',
+                                                pointFormat: '<b>{point.name}</b><br>Lat: {point.lat}, Lon: {point.lon}'
+                                            },
+
+                                            series: [{
+                                                // Use the gb-all map with no data as a basemap
+                                                name: 'Basemap',
+                                                borderColor: '#A0A0A0',
+                                                nullColor: 'rgb(40, 111, 98)',
+
+                                                showInLegend: false
+                                            }, {
+                                                name: 'Separators',
+                                                type: 'mapline',
+                                                nullColor: '#707070',
+                                                showInLegend: false,
+                                                enableMouseTracking: false
+                                            }, {
+                                                // Specify points using lat/lon
+                                                type: 'mappoint',
+                                                showInLegend: false,
+                                                point: {
+                                                    events: {
+                                                        click: pointClick
+                                                    }
+
+                                                },
+                                                color: Highcharts.getOptions().colors[1],
+                                                data: datawb,
+                                            }]
+                                        });
+                                    });
+                                }
+
+                                this.setTitle(null, { text: e.point.name });
+                            },
+                            drillup: function () {
+                                this.setTitle(null, { text: '' });
+                            },
+
+                        }
+                    },
+
+                    title: {
+                        text: 'India Map'
+                    },
+
+                    subtitle: {
+                        text: '',
+                        floating: true,
+                        align: 'right',
+                        y: 50,
+                        style: {
+                            fontSize: '16px'
+                        }
+                    },
+
+                    legend: false,
+
+
+                    colorAxis: {
+                        min: 0,
+                        minColor: '#E6E7E8',
+                        maxColor: '#005645'
+                    },
+
+
+                    plotOptions: {
+                        map: {
+                            states: {
+                                hover: {
+                                    color: '#EEDD66'
+                                }
+                            }
+                        }
+                    },
+                    mapNavigation: {
+                        enabled: true,
+                        buttonOptions: {
+                            verticalAlign: 'bottom'
+                        }
+                    },
+                    series: [{
+                        data: data,
+                        name: 'India',
+                        dataLabels: {
+                            enabled: true,
+                            format: '{point.properties.name}'
+                        }
+                    }, {
+                        type: 'mapline',
+                        data: separators,
+                        color: 'silver',
+                        enableMouseTracking: false,
+                        animation: {
+                            duration: 500
+                        }
+                    }],
+
+                    drilldown: {
+                        activeDataLabelStyle: {
+                            color: '#FFFFFF',
+                            textDecoration: 'none',
+                            textOutline: '1px #000000'
+                        },
+                        drillUpButton: {
+                            relativeTo: 'spacingBox',
+                            position: {
+                                x: 0,
+                                y: 60
+                            }
+                        }
+                    }
+                });
+
+                function getTigerReserves(stateID)
+                {
+                    $.ajax({
+                        type: "POST",
+                        url: "IndiaMapHighChart.aspx/GetTigerReserveByStateID",
+                        async: false,
+                        data: '{StateID: "' + stateID + '" }',
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function (response) {
+                           // debugger;
+                            // alert(response.d);
+                            datawb = response.d;
+                            //$.each(JSON.parse(response.d), function (idx, obj) {
+
+                            //    //radio = obj.status_id;
+                            //    //comment = obj.comment;
+                            //    nameSet = obj.name;
+                            //    latSet = parseFloat(obj.lat).toFixed(5);
+                            //    lonSet = parseFloat(obj.lon).toFixed(5);
+                            //    drilldownSets = obj.drilldown;
+
+
+                            //});
+
+                        },
+                        failure: function (request, error) {
+                            alert(" Can't do because: " + error);
+                        }
+                    });
+                }
+            </script>
+
+        </div>
+</asp:Content>
+

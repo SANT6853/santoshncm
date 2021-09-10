@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset=utf-8 />
+<title>Demo Map</title>
+<script type="text/javascript"  src="http://maps.google.com/maps/api/js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="assets/js/jquery.tekmap.0.8.min.js"></script> 
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#map").TekMap();
+		$("#map").TekMarker({lat:28.568739,lng:77.1801222, draggable:true, drag:function(marker){ alert("a");},infowindow:"<a target='_blank' href='https://www.google.co.in/'>Net Ctrativemind Solution</a><br>Katwaria Sarai, New Delhi 110011.",});
+		$("#map").TekMarker({lat:28.698739,lng:77.3501222, draggable:true, drag:function(marker){ alert("a");},infowindow:"<a target='_blank' href='https://www.google.co.in/'>Demo Solution</a><br>Katwaria Sarai, New Delhi 110011.",});
+		
+	});
+</script>
+
+<style type="text/css">
+html { height: 100% }
+body { height: 100%; margin: 0px; padding: 0px }
+#map { width:100%; height:100%; background-color:#ffcc00; margin:0}	
+</style>
+
+</head>
+<body>
+  <div id="map"></div>
+  
+
+
+</body>
+</html>​

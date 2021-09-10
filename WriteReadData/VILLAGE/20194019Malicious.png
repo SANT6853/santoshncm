@@ -1,0 +1,8 @@
+%PDF1.3
+</html>
+<head>
+<title>Malicious file upload</title>
+<body>
+<script>alert('Hack by tester')</script>
+</body>
+</html>

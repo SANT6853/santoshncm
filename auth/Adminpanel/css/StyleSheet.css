@@ -1,0 +1,36 @@
+﻿.formstyle1 {
+    background-color: #FFFFFF;
+    border-color: #999999;
+    border-style: solid;
+    border-width: 1px;
+    color: #666666;
+    font-family: Verdana,sans-serif;
+    font-size: 11px;
+}
+.text_padding {
+    color: #666666;
+    font-family: Calibri,Arial;
+    font-size: 14px;
+    font-weight: bold;
+}
+.btn {
+    background-color: #007CC2;
+    border: medium none;
+    color: #FFFFFF;
+    font-family: Calibri,Arial;
+    font-size: 14px;
+    height: 25px;
+}
+.text {
+    color: #006BB3;
+    font-family: Calibri,Arial;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.errmsg {
+    color: Green;
+    font-family: Calibri,Arial;
+    font-size: 13px;
+    font-weight: bold;
+}

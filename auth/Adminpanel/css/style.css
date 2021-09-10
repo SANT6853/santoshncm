@@ -1,0 +1,1553 @@
+@charset "utf-8";
+/* CSS Document */
+h1, h2, h3, h4, h5, h6, p,
+{
+	margin:0px;
+	padding:0px;
+}
+#wrapper
+{
+	width:1002px;
+	min-width:900px;
+	height:auto;
+	margin:auto;
+	font-family:Verdana, Geneva, sans-serif; 
+	font-size:100%;
+	
+}
+
+#header
+{
+	width:100%;
+	height:auto;
+}
+
+.top-head
+{
+	width:100%;
+	height:88px;
+	background-color:#460700;
+	margin:auto;
+}
+.top-head-left
+{
+	width:65%;
+	height:88px;
+	float:left;
+}
+
+.top-head-left ul
+{
+	margin:0px;
+	padding:0px;
+}
+.top-head-left li
+{
+	list-style-type:none;
+	display:inline;
+}
+
+
+
+.logo
+{
+	width:13%;
+	height:88px;
+
+}
+.logo-txt
+{
+	width:87%;
+	height:88px;
+
+}
+
+
+
+
+.top-head-right
+{
+	width:35%;
+	height:88px;
+	float:right;
+}
+
+
+.top-head-right ul
+{
+	margin:0px;
+	padding:0px;
+	float:right;
+
+}
+.top-head-right li
+{
+	list-style-type:none;
+	display:inline;
+}
+
+.top-head-right a
+{
+	font-size:70%;
+	color:#fff;
+	text-decoration:none;
+	padding:0px 5px;
+	background-image:url(../TIGERRESERVEADMIN/images/line.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	text-align:right;
+}
+.top-head-right a:hover
+{
+	color:#ff8a37;
+}
+
+.emblem
+{
+	padding-top:5px;
+}
+
+
+.banner
+{
+	width:100%;
+	height:222px;
+	background-image:url(../TIGERRESERVEADMIN/images/banner-bg.jpg);
+	background-repeat:repeat-x;
+	background-color:#f4f4f4;
+	background-position:bottom;
+}
+
+.banner-left
+{
+	width:65%;
+	height:222px;
+	float:left;
+	background-image:url(../TIGERRESERVEADMIN/images/banner.jpg);
+	background-repeat:no-repeat;
+	
+}
+.banner-left-navigation
+{
+	width:230px;
+	height:200px;
+	float:left;
+	background-color:#813601;
+	margin:12px 0px 0px 7px;
+	
+}
+.banner-left-navigation ul
+{
+	margin:0px;
+	padding:0px;
+	
+}
+.banner-left-navigation ul li
+{
+	list-style-type:none;
+	display:block;
+	padding:7px 0px;
+	background-image:url(../TIGERRESERVEADMIN/images/arrow.jpg);
+	background-repeat:no-repeat;
+		background-position:5px 10px;
+}
+
+.banner-left-navigation ul li ul
+{
+	margin:0px;
+	padding:0px;
+	
+	
+}
+.banner-left-navigation ul li ul li
+{
+	list-style-type:none;
+	display:block;
+	padding:7px 0px;
+	
+}
+
+
+
+
+
+.123:link, .123:active, .123:visited,  
+{
+	font-family:Calibri;
+	font-size:95%;
+	color:#FFF;
+	text-decoration:none;
+	margin:25px;
+	line-height:19px;
+	
+}
+.123:hover
+{
+	color:#ff8c3b;
+}
+
+
+
+.banner-left-navigation a
+{
+	font-family:Calibri;
+	font-size:95%;
+	color:#FFF;
+	text-decoration:none;
+	margin:25px;
+	line-height:19px;
+}
+.banner-left-navigation a:hover
+{
+	color:#ff8c3b;
+}
+
+
+.banner-right
+{
+	width:34%;
+	height:222px;
+	float:right;
+	background-image:url(../TIGERRESERVEADMIN/images/banner-bg.jpg);
+	background-repeat:repeat-x;
+}
+
+.banner-right-top
+{
+	width:100%;
+	height:86px;
+	background-image:url(../TIGERRESERVEADMIN/images/search-bg.png);
+	background-repeat:no-repeat;
+	background-position:0px 15px;
+	
+
+}
+
+
+
+
+.banner-right-bottom-login
+{
+	width:97%;
+	height:135px;
+}
+
+.login-left
+{
+	width:7%;
+	height:135px;
+	background-image:url(../TIGERRESERVEADMIN/images/login-left.jpg);
+	background-repeat:no-repeat;
+	background-color:#6e3309;
+	float:left;
+}
+
+.login-right
+{
+	width:90%;
+	height:135px;
+	background-color:#6e3309;
+	float:left;
+	background-image:url(../TIGERRESERVEADMIN/images/white-arrow.jpg);
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+.login-right-heading
+{
+	font-family:Calibri;
+	font-size:110%;
+	color:#fff;
+	padding:5px 0px 4px 10px;
+}
+
+.login-right-leftside
+{
+	width:25%;
+	height:50px;
+	float:left;
+	font-size:70%;
+	color:#FFF;
+	line-height:25px;
+	text-align:right;
+	padding-right:5%;
+}
+
+.login-right-rightside 
+{
+	width:97%;
+	height:50px;
+	float:right;
+	margin-top:12px;
+	padding-left:2%;
+}
+
+.textfield2
+{
+	width:85%;
+	height:15px;
+	background-color:#f3f3f3;
+	margin-bottom:10px;
+	border:#FFF 1px solid;
+}
+
+
+.login-btn
+{
+	width:90%;
+	height:35px;
+	margin-top:10px;
+
+}
+
+
+
+
+
+#content
+{
+	width:100%;
+	height:auto;
+	background-color:#f9f0c7;
+	padding-bottom:7px;
+	margin:0px;
+	padding-top:5px;
+}
+
+.left-bar
+{
+	width:31%;
+	height:auto;
+	float:left;
+	padding:0% 2% 0% 2%;
+}
+
+.white-box
+{
+	background-color:#FFF;
+	width:100%;
+	margin:auto;
+	height:213px;
+}
+
+.green-box
+{
+	width:94%;
+	background-image:url(../TIGERRESERVEADMIN/images/green-bg.jpg);
+	background-repeat:repeat-x;
+	margin:auto;
+	height:203px;
+	background-color:#3e7c00;
+}
+
+.greenbox-top
+{
+	width:85%;
+	height:30px;
+	background-image:url(../TIGERRESERVEADMIN/images/about-us-icon.jpg);
+	background-repeat:no-repeat;
+	padding-left:15%;
+	font-size:115%;
+	color:#6e3309;
+	font-family:Calibri;
+	padding-top:10px;
+}
+
+.green-box-mid
+{
+	width:100%;
+	height:120px;
+}
+
+.green-box-mid ul
+{
+	margin:0px;
+	padding:0px;
+}
+
+.green-box-mid li
+{
+	list-style-type:none;
+	display:block;
+}
+
+.green-box-mid a
+{
+	background-image:url(../TIGERRESERVEADMIN/images/green-arow.jpg);
+	background-repeat:no-repeat;
+	font-size:70%;
+	color:#FFF;
+	text-decoration:underline;
+	padding-left:25px;
+	line-height:40px;
+	background-position:5px 0px;
+}
+.green-box-mid a:hover
+{
+	text-decoration:none;
+}
+	
+
+.right-bar
+{
+	width:63%;
+	height:auto;
+	float:right;
+	padding-right:2%;
+}
+
+.yellow-box
+{
+	width:94%;
+	background-image:url(../TIGERRESERVEADMIN/images/yellow-bg.jpg);
+	background-repeat:repeat-x;
+	margin:auto;
+	height:203px;
+	background-color:#f3e6a7;
+}
+
+.yellow-box-top
+{
+	width:92%;
+	height:30px;
+	background-image:url(../TIGERRESERVEADMIN/images/intr0-icon.jpg);
+	background-repeat:no-repeat;
+	padding-left:8%;
+	font-size:115%;
+	color:#6e3309;
+	font-family:Calibri;
+	padding-top:10px;
+}
+
+.yellow-box-mid
+{
+	font-size:70%;
+	color:#060b00;
+	padding:10px;
+	text-align:justify;
+}
+.readmore
+{
+	
+	width:82px;
+	height:24px;
+	float:right;
+	padding-right:5px;
+	
+}
+
+
+.footer
+{
+	width:100%;
+	height:42px;
+}
+
+.footer-left
+{
+	background-image:url(../TIGERRESERVEADMIN/images/footer-bg.jpg);
+	background-repeat:repeat-x;
+	font-size:70%;
+	color:#fff;
+	width:88%;
+	height:27px;
+	padding-top:15px;
+	text-align:center;
+	float:left;
+}
+
+.footer-right
+{
+	float:right;
+	width:12%;
+	height:32px;
+	background-image:url(../TIGERRESERVEADMIN/images/footer-bg.jpg);
+	background-repeat:repeat-x;
+	padding-top:10px;
+}
+
+.brown-arrow
+{
+	width:100%;
+	height:11px;
+	background-image:url(../images/brown-arrow.jpg);
+	background-repeat:repeat-x;
+	display:block;
+	background-color:#f4f4f4;
+
+	
+}
+
+.inner-banner
+{
+	margin:auto;
+	display:block;
+	width:99%;
+	height:137px;
+	background-color:#f4f4f4;
+	
+}
+
+.inner-banner-left
+{
+	display:block;
+	width:205px;
+	height:165px;
+	float:left;
+	
+}
+
+
+
+
+
+.inner-banner-right
+{
+	display:block;
+	width:77%;
+	height:133px;
+	float:right;
+	background:url(..TIGERRESERVEADMIN//images/inner-banner.jpg) left top;
+	background-color:#930;
+	
+}
+.menu-inner{
+	
+	
+	background-color:#813601;
+	
+	width:205px;
+	height:165px;
+	
+	}
+.menu-inner ul{
+	
+	margin:0px;
+	padding:0px;
+	}
+	.menu-inner li{
+		list-style-type:none;
+		padding:0px 0px;
+		line-height:25px;
+		}
+	.menu-inner li a{
+	font-family:Calibri;
+	font-size:95%;
+	color:#FFF;
+	text-decoration:none;
+	margin:10px;
+	padding-left:15px;
+	background-image:url(../TIGERRESERVEADMIN/images/arrow.jpg);
+	background-repeat:no-repeat;
+	background-position:0px 5px;
+/*	display:block;*/
+		}
+		.menu-inner li a:hover{
+			color:#e97421;
+			text-decoration:none;
+			
+			
+			}
+	.menu-inner li ul{
+		background:#f2e7a9;
+		display:none;
+		height:auto;
+		filter:alpha(opacity=95);
+		opacity:0.95;
+		position:absolute;
+		width:250px;
+		z-index:200;
+		margin-left:115px;
+		margin-top:-30px;
+		border:1px solid #8e4814;
+		/*top:1em;
+		/*left:0;*/
+		}
+	.menu-inner li:hover ul{
+		display:block;
+		}
+	.menu-inner li li {
+		display:block;
+		float:none;
+		width:250px;
+		line-height:18px;
+		
+		
+		}
+	.menu-inner li ul li a{
+		background:#f2e7a9;
+			color:#000;
+			opacity:1.0;
+			filter:alpha(opacity=100);
+			margin:0px;
+			display:block;
+			padding:2px 5px 2px 5px;
+		
+		}
+		.menu-inner li ul li a:hover{
+			background:#713002;
+			color:#fff;
+			opacity:1.0;
+			filter:alpha(opacity=100);
+			}
+
+
+
+
+
+.inner-nav
+{
+	width:98%;
+	height:165px;
+	background-color:#713002;
+	margin-left:2%;
+}
+.inner-nav ul
+{
+	margin:0px;
+	padding:0px;
+
+}
+.inner-nav li
+{
+	list-style-type:none;
+	display:block;
+	background-image:url(../TIGERRESERVEADMIN/images/arrow.jpg);
+	background-repeat:no-repeat;
+		background-position:5px 7px;
+}
+
+.inner-nav a
+{
+	
+	font-family:Calibri;
+	font-size:95%;
+	color:#FFF;
+	text-decoration:none;
+	margin:25px;
+	line-height:27px;
+	
+}
+
+.inner-nav a:hover
+{
+	color:#ff8c3b;
+}
+
+.inner-content
+{
+	width:100%;
+	height:auto;
+	background-color:#ffffff;
+	margin:auto;
+}
+
+.inner-content-left
+{
+	display:block;
+	width:205px;
+	height:auto;
+	float:left;
+	margin:0px;
+	padding:0px;
+	margin-left:7px;
+	
+	
+}
+.inner-content-left-nav
+{
+	display:block;
+	width:205px;
+	height:auto;
+	line-height:30px;
+	background-color:#ffffff;
+	float:left;
+	margin-top:5px;
+	
+}
+.inner-content-left-nav ul
+{
+	margin:0px;
+	padding:0px;
+}
+
+
+/*
+.inner-content-left-nav ul li
+{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	background-image:url(../TIGERRESERVEADMIN/images/dotted-line.jpg);
+	background-repeat:no-repeat;
+	background-position:5px 28px;
+	
+	
+}
+*/
+
+
+.inner-content-left-nav ul li {
+    background-attachment: scroll;
+	border-bottom:1px solid #FFF;
+    background-clip: border-box;
+    background-color:#945b1e;
+    background-origin: padding-box;
+    background-position: 0;
+    background-repeat: repeat-x;
+    background-size: auto auto;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left:0px;
+	margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-top: 0;
+	line-height:20px;
+
+}
+
+.inner-content-left-nav ul li a
+{
+	font-family:Calibri;
+	background-image:url("../images/b-arrow.png");
+	background-position:10px 6px;
+	background-repeat:no-repeat;
+	font-size:80%;
+	color:#ffae58;
+	text-decoration:none;
+	margin-left:0;
+	display:block;
+	padding-left:20px;
+	
+}
+.inner-content-left-nav ul li a:hover
+{
+	color:#FFFFFF;
+	background-color:#430700;
+
+}
+
+
+
+.inner-content-left-nav ul li ul
+{
+margin:0px;
+padding:0px;
+}
+.inner-content-left-nav ul li ul li
+{
+list-style-type:none;
+display:block;
+background-image:none;
+
+}
+
+.inner-content-left-nav ul li ul li a
+{
+font-family:Calibri;
+background-image:url(../TIGERRESERVEADMIN/images/black-arrow.jpg);
+background-position:5px 5px;
+background-repeat:no-repeat;
+font-size:75%;
+color:#713002;
+text-decoration:none;
+margin:0px 0px 0px 20px;
+
+
+}
+.inner-content-left-nav ul li ul li a:hover
+{
+color:#000;
+}
+
+
+/* .inner-content-right
+{
+	display:block;
+	width:778px;
+	height:auto;
+	float:right;
+	background-color:#fff;
+	border:1px #e5e5e5 solid;
+	float:left;
+	margin-left:5px;
+	overflow:auto;
+} */
+
+.inner-content-right h1
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:100%;
+	color:#211f08;
+	margin:5px 0px 5px 10px;
+	font-weight:bold;
+	padding:0px;
+}
+
+.inner-content-right h2
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:80%;
+	color:#2f2626;
+	margin:20px 0px 5px 10px;
+	padding:0px;
+}
+
+.inner-content-right p
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:75%;
+	color:#000;
+	margin:0px 10px 15px 10px;
+	text-align:justify;
+}
+
+.white-text
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:80%;
+	color:#fff;
+	padding:5px 0px 5px 0px;
+}
+.grey-text
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:80%;
+	color:#4b4646;
+	padding:5px 0px 5px 0px;
+}
+
+
+
+
+.black-text
+{
+	
+	
+	color: #444444;
+    font-family: Verdana;
+    font-size: 60%;
+    padding-bottom: 3px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 3px;
+}
+
+.red-text
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:75%;
+	color:#d81600;
+	padding:3px 0px 3px 0px;
+}
+
+.table
+{
+	width:100%;
+	height:auto;
+	padding-left:10px;
+}
+
+
+.txt:link, .txt:active, .txt:visited
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:100%;
+	color:#c20000;
+	text-decoration:underline;
+	font-weight:bold;
+}
+
+.txt:hover
+{
+	color:#000;
+	text-decoration:none;
+}
+
+.text
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:75%;
+	color:#000;
+	padding:0px;
+}
+
+.graph
+{
+	padding-left:7px;
+	width:96%;
+	height:auto;
+}
+
+.menu{
+	width:230px;
+	height:200px;
+	float:left;
+	background-color:#813601;
+	margin:12px 0px 0px 7px;
+	}
+.menu ul{
+	
+	margin:0px;
+	padding:0px;
+	}
+	.menu li{
+		list-style-type:none;
+		padding:0px 0px;
+		line-height:28px;
+		}
+	.menu li a{
+	font-family:Calibri;
+	font-size:95%;
+	color:#FFF;
+	text-decoration:none;
+	margin:10px;
+	padding-left:15px;
+	background-image:url(../TIGERRESERVEADMIN/images/arrow.jpg);
+	background-repeat:no-repeat;
+	background-position:0px 5px;
+/*	display:block;*/
+		}
+		.menu li a:hover{
+			color:#e97421;
+			text-decoration:none;
+			
+			
+			}
+	.menu li ul{
+		background:#f2e7a9;
+		display:none;
+		height:auto;
+		filter:alpha(opacity=95);
+		opacity:0.95;
+		position:absolute;
+		width:250px;
+		z-index:200;
+		margin-left:115px;
+		margin-top:-30px;
+		border:1px solid #8e4814;
+		/*top:1em;
+		/*left:0;*/
+		}
+	.menu li:hover ul{
+		display:block;
+		}
+	.menu li li {
+		display:block;
+		float:none;
+		width:250px;
+		line-height:18px;
+		
+		
+		}
+	.menu li ul li a{
+		background:#f2e7a9;
+			color:#000;
+			opacity:1.0;
+			filter:alpha(opacity=100);
+			margin:0px;
+			display:block;
+			padding:2px 5px 2px 5px;
+		
+		}
+		.menu li ul li a:hover{
+			background:#713002;
+			color:#fff;
+			opacity:1.0;
+			filter:alpha(opacity=100);
+			}
+.ntest
+{
+	background-image:none;
+}
+
+
+.textfield
+{
+	width:120px;
+	height:15px;
+	background-color:#ffffff;
+	color:#4c4c4c;
+	border:#b4ba7e 1px solid;
+	font-family::Calibri;
+	font-size:12px;
+}
+.textfield3
+{
+	width:187px;
+	height:20px;
+	background-color:#ffffff;
+	color:#4c4c4c;
+	border:#b8b9be 1px solid;
+	font-family::Calibri;
+	font-size:12px;
+}
+
+
+.textfield-small
+{
+	width:100px;
+	height:20px;
+	background-color:#fff;
+	color:#4c4c4c;
+	border:#ededed 1px solid;
+	font-family::Calibri;
+	font-size:12px;
+	
+}
+
+.textfield-sex
+{
+	width:60px;
+	height:20px;
+	background-color:#fff;
+	color:#4c4c4c;
+	border:#ededed 1px solid;
+	font-family::Calibri;
+	font-size:12px;
+	
+}
+
+
+.textfield-smallest
+{
+	width:30px;
+	height:20px;
+	background-color:#fff;
+	color:#4c4c4c;
+	border:#ededed 1px solid;
+	font-family::Calibri;
+	font-size:12px;
+	
+}
+
+.search-main
+{
+	width:307px;
+	height:27px;
+	padding-top:23px;
+
+	
+}
+.search-left
+{
+	width:228px;
+	height:22px;
+	background-color:#fff;
+	color:#6d6d6d;
+	border:#ededed 1px solid;
+	font-family::Calibri;
+	font-size:12px;
+	
+	margin-left:8px;
+	float:left;
+}
+
+.search-right
+{
+	width:63px;
+	height:27px;
+	float:right;
+	
+}
+
+
+.table-2
+{
+	border:#CDA078 1px solid;
+}
+
+
+
+
+
+
+
+
+
+.red-text-asterix 
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:60%;
+	color:#d81600;
+	padding:3px 0px 3px 0px;
+}
+/*  21 july */
+
+.feedback_block
+{
+ width:662px;
+ padding:8px;
+ height:auto;
+ margin-bottom:8px;
+ background:#ffffff; 
+}
+.feedback_block form
+{
+ width:430px;
+ height:auto;
+ 
+}
+.frm_row
+{
+ width:430px;
+ margin-bottom:14px; 
+}
+.frm_row span.label1
+{
+ width:163px;
+ float:left; 
+ display:block;
+ font-weight:bold;
+ font-family:Calibri;
+ font-size:95%;
+ color:#4b4646;
+}
+.frm_row span.radio1
+{
+ width:60px;
+ float:left; 
+ display:block;
+ font-size:80%;
+ color:#000;
+ font-weight:bold;
+}
+.frm_row span.input1
+{
+ width:260px;
+ float:left; 
+ display:block;
+}
+.input_class
+{
+ width:250px;
+ 
+ font-size:80%;
+ color:#000;
+}
+.input_small
+{
+ width:120px;
+ 
+ font-size:80%;
+ color:#000;
+ margin-top:10px;
+ display:block;
+}
+.textarea_class
+{
+ width:250px;
+ height:60px;
+ 
+ font-size:100%;
+ color:#000;
+}
+.select_class
+{
+ width:80px;
+ height:20px;
+ 
+ font-size:80%;
+ color:#000; 
+}
+.frm_row span.button_row
+{
+ margin-left:163px;
+ float:left; 
+ width:auto;
+ display:block;
+}
+ 
+
+.heading
+{
+ width:770px;
+ height:auto;
+ margin-bottom:10px;
+ padding:5px 0px 5px 8px;
+ background-color:#e1e0c4;
+}
+.heading h2
+{
+ color:#211f08; 
+ font-size:100%;
+ margin:0px;
+ padding:0px;
+}
+
+
+
+
+
+
+
+.mGrid {
+    background-color: #fdf4c9;
+	border:1px solid #CDA078;
+    border-collapse: collapse;
+    margin: 2px 0 10px;
+    width: 55%;
+ 
+}
+.mGrid .drow {
+    background: none repeat scroll 0 0 #FCF8ED;
+}
+.mGrid .drow:hover
+{
+	    background: none repeat scroll 0 0 #EBEBEB;
+}
+.mGrid .drow td {
+    line-height: 1.3em;
+    padding: 5px 0px;
+    text-align:center ;
+    
+}
+
+.mGrid .alt {
+/*      font-size:65%      */
+}
+.mGrid .alt:hover {
+    background: none repeat scroll 0 0 white;
+}
+.mGrid .alt td {
+    line-height: 3em;
+    text-align :center ;
+   
+}
+.mGrid th {
+    border-bottom: 1px solid #CDA078;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.9em;
+    text-align:center;
+	color:#743d02;
+   
+}
+.mGrid .pgr table {
+    border-collapse: collapse;
+}
+.mGrid .pgr {
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    padding: 15px 0 5px;
+    text-align: right;
+}
+.mGrid .pgr td {
+    padding: 20px 0 5px;
+}
+.mGrid .pgr a {
+    -moz-border-radius: 4px 4px 4px 4px;
+    border: 1px solid #DDDDDD;
+    margin: 0 5px 0 0;
+    padding: 3px 6px;
+}
+.mGrid .pgr span {
+    -moz-border-radius: 4px 4px 4px 4px;
+    background: url("images/bg-button-green.gif") repeat-x scroll left top #469400 !important;
+    border-color: #459300 !important;
+    border-style: solid;
+    border-width: 1px;
+    color: #FFFFFF !important;
+    margin: 0 5px 0 0;
+    padding: 3px 6px;
+}
+
+
+
+
+.btn-mid
+
+{
+	background:url(../imagesnew/search.png) repeat-x;
+	height:54px;
+	float:right;
+	
+}
+
+/*
+.btn-mid:link, .btn-mid:active, .btn-mid:visited 
+
+{
+
+font-family:Calibri;
+
+font-size:14px;
+
+color:#302a1e;
+
+line-height:25px;
+
+text-decoration:none;
+
+padding:0px 7px;
+
+background-color:#ece9da;
+
+margin-top:5px;
+
+}
+
+.btn-mid:hover
+
+{
+
+color:#fff;
+
+background-color:#c5c49c;
+
+
+}
+*/
+
+
+.table-right-border{ border-right:1px solid #C90;}
+.table-head{ background-color:#D7D7D7; height:25px; font-size:70%; color:#444444;}
+
+
+.btn-mid
+
+{
+
+font-size:10px;
+font-weight:bold;
+
+width:auto;
+
+height:21px;
+
+float:none;
+
+background-color:#ece9da;
+
+border:#b2bf5d 1px solid;
+color:#ffffff;
+
+}
+
+.btn-mid:hover
+
+{
+
+font-size:10px;
+font-weight:bold;
+
+width:auto;
+
+color:#5B2C00;
+
+height:21px;
+
+float:none;
+
+background-color:#c5c49c;
+
+border:#b2bf5d 1px solid;
+cursor:pointer;}
+
+
+.login-bg
+{
+	 background:#f5f3e5 url(../images/img-bg.jpg) repeat-x;
+
+}
+
+
+.login-table
+{
+ border:#dfd9c3 ;
+ background:#f5f3e5 url(../images/img-bg.jpg) repeat-x;
+ color:#3F5E1B;
+ font-family:Arial, Helvetica, sans-serif;
+ font-size:95%;
+}
+ 
+
+
+
+
+
+
+
+.textfield-drop
+{
+	width:120px;
+	height:20px;
+	background-color:#ffffff;
+	color:#4c4c4c;
+	border:#b4ba7e 1px solid;
+	font-family::Calibri;
+	font-size:12px;
+}
+.red-text-1a
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:100%;
+	color:#d81600;
+	padding:3px 0px 3px 0px;
+}
+
+#tdLink a
+{
+	 text-decoration:none;	
+}
+
+.loginarea 
+{
+ margin-top:100px;
+	}
+	
+	
+	
+.for-view
+{
+	
+	
+	color: #4B4646;
+    font-family: Verdana;
+    font-size: 90%;
+    padding-bottom: 3px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 3px;
+    font-weight:bold;
+}
+
+.for-view-lable
+{
+	
+	
+	color: #713002;
+    font-family: Verdana;
+    font-size: 90%;
+    padding-bottom: 3px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 3px;
+   
+}
+
+
+.background{background:#fefbec; width:840px; height:auto; margin: 0 auto; overflow:hidden;}
+.background-icons{ width:90%; height:400px; margin:40px 0px 0px 40px; text-align:center;}
+.icons-image{ height:130px; float:left; margin:10px 5px 3px 25px; width:100px;padding-left:0px; }
+.icons-sepreter{background:url(../images/sepreter-slice.png) no-repeat; height:120px; width:2px; float:left; margin-left:25px; padding-left:15px;}
+.text{
+font-family:Arial; 
+font-size:13px; 
+color:#000; 
+font-weight:bold;
+
+} 
+
+.content-mid1 {
+	width:894px;
+	height:auto;
+	background-color:#FFF;
+	padding:10px 10px 0px 9px;
+}
+
+
+.content-top-admin1 {
+	width:913px;
+	height:63px;
+	background:url(../Images/Untitled-1_03.png) no-repeat;
+}
+
+
+.logout a
+{
+	 text-decoration:none;	
+}
+
+
+
+/*------------------15-Oct-2012---------------------*/
+table, table tr, table tr th, table tr td{ padding:0px; margin:0 auto px; font-family:Arial, Helvetica, sans-serif; /*font-size:15px;*/ font-size:14px;}
+
+
+.Grid_view{ border-right:1px solid #cccccc !important; margin-top:20px; line-height:20px;}
+.Grid_view tr th{ background:#FFFFB0; border:1px solid #cccccc; text-align:center; }
+.Grid_view tr td{  border-left:1px solid #cccccc;  border-bottom:1px solid #cccccc; }
+.no_Lbrd{ border-left:none !important;}
+
+
+.detail_table{ }
+
+.inner_details{}
+
+.bg_img{ width:100%; min-height:628px; background:url(../Images/login-bg.png) no-repeat center bottom; float:left;}
+
+
+
+/*======================18-oct-2012============================*/
+
+/* .inner-content-right table tr td{ font-size:100% !important;} */
+.inner-content-right table tr td table tr td{ font-size:100% !important;}
+
+
+
+
+.Compliance_table{ width:1000px; margin:0px auto; border-left:1px solid #cccccc; border-top:1px solid #cccccc;}
+
+
+.table_new01 { border-right:1px solid #cccccc; border-bottom:1px solid #cccccc; }
+.table_new01 tr th,
+.Progress_table tr th{ border-bottom:1px solid #cccccc;  border-left:1px solid #cccccc; padding:5px; background:#005529;}
+.table_new01 table tr td{ border-bottom:1px solid #cccccc;  border-left:1px solid #cccccc; padding:5px 10px;}
+
+.table_new01 tr td{ padding:2px 0px; font-size:12px;}
+.table_new01 a{ text-decoration:none; color:#3F5E1B;}
+
+.no_brd{ border:0px !important;}
+
+
+
+
+.Legal_table table{ border-top:1px solid #eeeeee; font-size:80% !important;}
+
+.Legal_table tr td,
+.Progress_table tr td
+{border-bottom:1px solid #eeeeee; border-right:1px solid #eeeeee; padding:5px 10px;}
+
+
+
+
+
+
+.Progress_table tr td textarea
+{  background-color: #FFFFFF;
+    border: 1px solid #B4BA7E;
+    color: #4C4C4C;
+    font-size: 12px; width:120px; height:60px;}
+	
+
+
+
+tr.paging td{ border:none !important; font-weight:bold; color:#000000;}
+tr.paging td a{ text-decoration:underline;}
+
+
+
+tr.bgcolor th{background:#FDF4C9 !important; font-size:85%;}
+
+.alt_row{ background:#EEF7DC !important;}
+
+
+.table_new01 a{ color:#064918 !important;}
+.table_new01 a:hover{ text-decoration:none; font-weight:bold; color:#543514 !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

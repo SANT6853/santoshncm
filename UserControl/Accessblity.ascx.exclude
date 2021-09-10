@@ -1,0 +1,110 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Accessblity.ascx.cs" Inherits="UserControl_Accessblity" %>
+<%--<%@ Register Src="~/UserControl/print.ascx" TagName="Print" TagPrefix="PrintControl" %>--%>
+<script type="text/javascript">
+    function search() {
+
+        var Search = document.getElementById('<%= txtSearch.ClientID %>').value;
+
+
+        if (Search == "Enter  Text  to Search" || Search == "Enter Text to Search") {
+
+            alert("Please Enter Text  to Search");
+            document.getElementById('<%= txtSearch.ClientID %>').focus();
+            return false;
+        }
+        else if (Search == "अपने खोजशब्द दर्ज करें") {
+            alert("अपने खोजशब्द दर्ज करें.");
+            document.getElementById('<%= txtSearch.ClientID %>').focus();
+            return (false);
+        }
+
+        if (Search == "") {
+
+            //alert("Please  Enter  Text to Search");
+            if (("<%=  Resources.NTCAResources.Lang_Id %>") == 2) {
+                alert("अपने खोजशब्द दर्ज करें");
+            }
+            else {
+                alert("Enter  Text  to Search");
+            }
+            document.getElementById('<%= txtSearch.ClientID %>').focus();
+            return false;
+        }
+    }
+    function getText() {
+        var Search = document.getElementById('<%= txtSearch.ClientID %>');
+
+        if (Search.value == '') {
+
+            if (("<%= Resources.NTCAResources.Lang_Id %>") == 2) {
+                Search.value = 'अपने खोजशब्द दर्ज करें';
+            }
+            else {
+                Search.value = 'Enter Text to Search';
+            }
+        }
+    }
+</script>
+
+<div class="container-fluid accebility-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="top-menu pull-left" id="example1">
+          <li class="skip-to-m-h"><a href="#mid"  title='<%=Resources.NTCAResources.SkipToMainContent %>'><span class="pull-left"><img src=<%=ResolveUrl("~/images/skip-content.png")%> alt="Screen Reader Access2" title="Screen Reader Access" /></span><span class="access_span"><%=Resources.NTCAResources.SkipToMainContent %></span></a></li>
+          <li class="screen-reader-m-h" title="Screen Reader Access"> <a  title='<%=Resources.NTCAResources.ScreenReaderAccess %>' href='<%=(Convert.ToInt32(Resources.NTCAResources.Lang_Id)==1) ? ResolveUrl("~/ScreenReaderAccess.aspx") : ResolveUrl("~/content/Hindi/ScreenReaderAccess.aspx") %>'><span class="pull-left"><img src=<%=ResolveUrl("~/images/screen-reader.png")%> alt="Screen Reader Access1" title="Screen Reader Access" /></span><span class="access_span"> <%=Resources.NTCAResources.ScreenReaderAccess %></span></a></li>
+        </ul>
+        <ul class="top-menu pull-right" id="example2">
+          <li class="slave" style="padding-top:2px;">
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" EnableClientScript="true" ControlToValidate="txtSearch" Display="None" SetFocusOnError="true" ErrorMessage="Please enter keyword to search"></asp:RequiredFieldValidator>
+            <label for="<%= txtSearch.ClientID %>" style="display:none"> Search </label>
+            <asp:TextBox ID="txtSearch" class="search"  placeholder="Enter  Text  to Search"  onfocus ="javascript:if(this.value!=''){this.value=''}" onblur="getText()" runat="server"></asp:TextBox>
+            <asp:HiddenField ID="cx" Value="016057011625966138646:nsxdhmd1lxg" runat="server" />
+            <asp:HiddenField ID="cof" Value="FORID:9" runat="server" />
+            <asp:HiddenField ID="ie" Value="UTF-8" runat="server" />
+            <asp:ImageButton ID="ImageButton1"  runat="server" class="search-buttion"  OnClientClick="return search();" onclick="ImageButton1_Click" AlternateText="Search" ImageUrl="../Images/search-icon.jpg" />
+            <%-- <form name="">
+                <label for="Search">Search</label>
+
+
+                  
+                <input type="text" class="input-bg" placeholder="Search" id="Search" value="" name="Search">
+                <input type="image" alt="Search" class="search_button" title="Search">
+              </form>--%>
+          </li>
+          <li><a href="javascript:void(0);" title="Increase font size" onClick="set_font_size('increase')">A<sup>+</sup><span class="hidethis">Increase font size</span></a></li>
+          <li><a href="javascript:void(0);" title="Reset font size" onClick="set_font_size('')">A <span class="hidethis">Reset font size</span></a></li>
+          <li><a href="javascript:void(0);" title="Decrease font size" onClick="set_font_size('decrease')" >A<sup>-</sup> <span class="hidethis">Decrease font size</span></a></li>
+          <li class="hight-contrast"><a href="javascript:void(0);" title="High Contrast" class="hc" onclick="chooseStyle('change', 60);">A <span class="hidethis">High Contrast</span></a></li>
+          <li class="normal"><a href="javascript:void(0);" title="Normal" class="normal"  onclick="chooseStyle('style', 60);">A <span class="hidethis">Normal</span></a></li>
+          <li class=""><a href="javascript:void(0);" title="Blue Theme" class=""  onclick="chooseStyle('blue', 60);"><img src='<%=ResolveUrl("~/App_themes/Orange/images/blue.png")%>' alt="" title=""><span class="hidethis"></span></a></li>
+          <li class=""><a href="javascript:void(0);" title="Orange Theme" class=""  onclick="chooseStyle('orange', 60);"><img src='<%=ResolveUrl("~/App_themes/Orange/images/Orange.png" )%>' alt="Orange" title="Orange Theme"><span class="hidethis">Normal</span></a></li>
+          <li class=""><a href="javascript:void(0);" title="Green Theme" class=""  onclick="chooseStyle('green', 60);"><img src='<%=ResolveUrl("~/App_themes/Orange/images/green.png")%>' alt="Green" title="Green Theme"> <span class="hidethis">Normal</span></a></li>
+          <!--<li><asp:ImageButton ID="ImgbtnBlue" runat="server" OnClick="ImgbtnBlue_Click" /></li>
+       
+        
+            <li> <asp:ImageButton ID="ImgbtnOrange" runat="server" OnClick="ImgbtnOrange_Click" /></li>
+       
+      
+             <li><asp:ImageButton ID="ImgbtnGreen" runat="server" OnClick="ibGreen_Click" /></li>-->
+          
+          <li> <a onclick="javascript:return confirm( '<%= Resources.Resource.Language  %> <%= Resources.Resource.LangChange  %>');" href="<%=(Convert.ToInt32(Resources.Resource.Lang_Id)==2) ? ResolveUrl("~/index.aspx") : ResolveUrl("~/content/Hindi/index.aspx") %>" title='<%= Resources.Resource.Language  %>' >
+            <%if (Resources.Resource.Lang_Id == "1") %>
+            <%{ %>
+            <img src='<%=ResolveUrl("~/images/hindi.jpg" )%>' alt="Hindi" title="Hindi"/>
+            <%} %>
+            <%else
+              {%>
+            <img src='<%=ResolveUrl("~/images/english.jpg" )%>' alt="Hindi" title="Hindi" width="70" height="19" border="0"/>
+            <%} %>
+            </a> </li>
+          
+          <!--<li> <PrintControl:Print ID="pnt" runat="server" />
+            <asp:ImageButton ID="Imgbtnprinticon" Visible="false" runat="server" />    </li>-->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

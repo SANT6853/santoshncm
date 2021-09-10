@@ -1,0 +1,9 @@
+@media print 
+{
+  a[href]:after { content: none !important; }
+  img[src]:after { content: none !important; }
+  #main-nav, .logo_section, .glyphicon-print{display:none !important;}
+}
+
+/*@page {size: portrait;
+margin: 4px;}*/

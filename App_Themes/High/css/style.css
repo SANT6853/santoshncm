@@ -1,0 +1,137 @@
+
+a{ color:#FF0}
+p{ color:#FFF}
+body {
+    background: #101010;color:#FFF
+   
+}
+.caption_box{ background:#3A3A3A}
+.G_box{ background:#252525}
+.navigation{ background:#252525}
+#left_sedebar h2{ background:#252525}
+#left_sedebar ul li a{color:#FC0}
+#left_sedebar ul li a:hover{background:#000000 url( "../images/bullet-arrow-hover.png") no-repeat scroll 13px 14px}
+.access-links ul li a{color:#FFE800;}
+#nav .MenuLi{background:url(../images/seperator.gif) no-repeat scroll right center transparent;position:relative;margin-right:-1px;}
+#left_sedebar ul li{ background:#3E3E3E; border-bottom:1px solid #0D0D0D }
+.footer-text{ background:#252525}
+.breadcrumb a:before{background:#252525}
+.breadcrumb a{background:#252525}
+.breadcrumb a.active, .breadcrumb a:hover{
+	background: #333;
+	background: linear-gradient(#252525, #252525);  
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #252525, #252525); 
+}
+#body-part .middle-part .req .readmore a{ color:#FC0}
+#body-part .welcome-part .director-message .readmore a{color:#FC0}
+.footer-text ul li a{color:#FC0}
+#body-part .middle-part .req h2{background:#252525}
+#body-part .middle-part .req .readmore a{background:#282828}
+#body-part .middle-part .req .readmore a:hover{background:#0D0D0D}
+#body-part .welcome-part .welcome-content h2{color:#fff}
+#body-part .welcome-part .director-message h2{ color:#fff;}
+#body-part .welcome-part .director-message .readmore a{  background: #252525;}
+#body-part .welcome-part .director-message .readmore a:hover{ background: #3E3E3E;}
+.visitor-counter, .footer-text-tech-powerd, .media-annoucement{color:#fff;}
+.innner-page-main-about-us-bredcum{ background:#1D1D1D}
+.internal-page-right-part h2{ color:#FFF;}
+#nav .MenuLi ul{border: 1px solid #000;}
+#nav .MenuLi ul li a{background:#1E1E1E !important; border-bottom: 1px solid #000; color:#FC0}
+#nav .MenuLi .menuFirstNode:hover, #nav .MenuLi.hover .menuFirstNode{background:#000; color:#FFF;}
+#nav .MenuLi ul li a:hover, #nav .MenuLi ul li > a.selected, #nav ul a:hover, #nav ul a:focus, #nav ul a.selected{color:#fff;}
+#nav .MenuLi .menuFirstNode{ color:#FFE800;}
+.logo-part h2{color:#fff;}
+.logo-part h1{color:#fff!important;}
+.access-links-right-section .select-theme{color:#fff;}
+#body-part .welcome-part .welcome-content p{color:#fff;}
+#body-part .welcome-part .director-message p {color:#fff;}
+#body-part .middle-part .req p{color:#fff;}
+
+.search-part input{ color:#FFF; background:#000;}
+
+.ticker-bg {
+    background: url("../images/ticker-bg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    }
+.mt-news a{ color:#FC0}
+.mt-news a:hover{ color:#fff}
+.mt-play {background-color: #e1e1e1;background-image: url("../images/play.png");}
+.mt-pause {background-image: url("../images/pause.png");}
+.mt-prev {background-image: url("../images/prev.png");}
+.mt-next {background-image: url("../images/nxt.png");}
+.ca-menu li{
+    width:100%;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background: #383838;
+}
+.ca-menu li a{
+    color: #FF0;
+}
+.ca-sub{
+    color: #FF0;
+}
+.ca-menu li:hover{
+    background: #000;
+}
+.ca-menu li:hover .ca-icon{
+    color: #fff;
+}
+.ca-menu li:hover .ca-main{
+    color:#fff;
+}
+.button_row input {background:#252525; border:solid 1px #1c78cd; color:#fff; } 
+
+.logo-part .logo-img-high {
+   /* background: rgba(0, 0, 0, 0) url("../images/emblem-dark1.png") no-repeat scroll 3px 13px;*/
+    height: 103px;
+    background-size: 83%;
+}
+.logo-part .logo-img-high  img{
+	width:100%;
+	padding-top:13px;
+}
+.logo-part .logo-img-high {
+    float: left;
+    margin: 0;
+    width: 60px;
+    margin-left: 15px;
+	display:block;
+}
+.logo-part .img-top{
+	background:none;
+}
+.logo-part .img-bottom{    background: none;}
+.footer-scroller .modern-ticker, .footer-text-tech{background: #101010;}
+.logo-part, .logo-and-menu-part{background: #101010;}
+.logo-part .logo-img{display:none;}
+#accessibility { background: #2A2929 none repeat scroll 0 0; border-bottom: 1px solid #686868;}
+#accessibility .access-links ul li { border-right: 1px solid #686868;}
+.access-links-right-section .select-theme { border-left: 1px solid #686868;}
+.footer-text-tech, table tr td { color: #fff;}
+.footer-text ul li:hover { background: #000;}
+table caption { background: #404040;}
+table tr th {background: none repeat scroll 0 0 #000; border-right: 1px solid #fff;}
+ .logo-part .img-bottom  {left: -19px;}
+ #left_sedebar li {  list-style: outside none none;}
+.footer-text ul li a {
+    color: #fc0;
+    border-right: 1px solid #fff;
+    padding: 0 5px 0 0;
+}
+.breadcrumb a::after { border-radius: 0 5px 0 50px;  box-shadow: 2px -2px 0 2px #707070, 3px -3px 0 2px rgba(255, 255, 255, 0.1);}
+.ca-content h2{ font-size:124%; font-family: "Open Sans"; font-weight:500;
+}
+.internal-page-right-part ul li ul li { background: rgba(0, 0, 0, 0) url("../images/aero-high.png") no-repeat scroll left 12px;}
+.internal-page-right-part ul li { background: rgba(0, 0, 0, 0) url("../images/bullet-high.png") no-repeat scroll left 10px;   }
+.sitemap h3 {background: #4b4b4b none repeat scroll 0 0;}
+.caption_box a:hover {background: #3b3b3b none repeat scroll 0 0;}
+.navigation-bg {
+    width: 100%;
+    float: left;
+    background: #2a2929;
+}

@@ -1,0 +1,15 @@
+@media print 
+{
+  /*a[href]:after { content: none !important; }
+  img[src]:after { content: none !important; }*/
+  
+  *{
+	  font-size:12px !important;
+  }
+  @page {size: portrait;}
+  #ImageButton1 ,#btnPrint{ display:none;}
+  .container-fluid{ margin-top:-20px !important;}
+  #panel1{ padding-top:0px !important;}
+  #print_area{margin-top:0px !important;}
+}
+

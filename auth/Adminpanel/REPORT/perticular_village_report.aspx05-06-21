@@ -1,0 +1,129 @@
+﻿<%@ Page Title="NTCA:Particular Village Report" Language="C#" MasterPageFile="~/auth/Adminpanel/Adminmaster.master" AutoEventWireup="true" CodeFile="perticular_village_report.aspx.cs" Inherits="auth_Adminpanel_REPORT_perticular_village_report" %>
+ <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contentbody" Runat="Server">
+<style>
+.table-2 td{
+
+text-align:left;
+
+padding-bottom:4px;
+}
+.container-fluid{
+margin-bottom:50px !important;
+}
+</style>
+   
+<style type="text/css">
+
+.Village-Report{ border-top:1px solid #cccccc; border-left:1px solid #cccccc; }
+.Village-Report ol, .Village-Report ol li{ padding:0px 0px 0px 10px; margin:0px 0px 0px 25px;}
+
+.Village-Report tr td{ padding:5px; border-bottom:1px solid #cccccc; border-right:1px solid #cccccc;}
+
+.report3 tr td{ border-bottom:0px !important;}
+
+.no_brd{ border:0px !important;}
+.no_padding{ padding:0px !important;}
+
+
+</style>
+<div class="container-fluid" style="margin-top: 10px; margin-bottom: 62px; padding: 10px; background:#fff;"> 
+<div class="inner-content-right">
+
+<table width="99%" border="0" cellspacing="0" cellpadding="0" class="table-2">
+  <tr>
+	<td colspan="6" style="border-bottom: 3px solid #005529;"><h3 style="color: #005529;">Particular Village Report</h3></td>
+    
+  </tr>
+  <tr>
+    <td colspan="3">&nbsp;</td>
+  </tr>
+ <tr>
+ <td colspan="3" align ="center">
+     <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label></td>
+  </tr> 
+
+ <%if (Session["UserType"].ToString().Equals("1"))
+                          {%>
+ <tr>
+    <td  width="10%">
+   Select Tiger Reserve Name:
+       </td>
+    <td  width="14%" >
+      <asp:DropDownList ID="ddlselectreserve" runat="server"  CssClass="textfield-drop form-control" OnSelectedIndexChanged="ddlselectreserve_SelectedIndexChanged" AutoPostBack="True">
+                            </asp:DropDownList>
+    </td>
+    <td align="right">
+       
+        &nbsp;</td>
+		<td align="right" >
+       
+            &nbsp;</td>
+		<td align="right" >
+       
+            &nbsp;</td>
+		<td align="right" >
+       
+            &nbsp;</td>
+ </tr>
+  <%} %>
+ <tr>
+    <td  width="10%">
+   
+      <asp:Label ID="lblserch" runat="server" Text="Select Village:"></asp:Label>
+       <br />
+    </td>
+    <td  width="14%" >
+     <asp:DropDownList ID="ddlvillage" 
+            runat="server"  AutoPostBack="false" CssClass="form-control" 
+            >
+        </asp:DropDownList>
+        </td>
+    <td align="right">
+       
+        </td>
+		<td align="right" >
+       
+        </td>
+		<td align="right" >
+       
+        </td>
+		<td align="right" >
+       
+        </td>
+ </tr>
+ 
+
+<tr>
+    <td  width="10%">
+   
+     
+    </td>
+    <td  width="35%" style="padding-top:15px;">
+			<asp:Button ID="Button1" runat="server" CssClass="btn btn-primary btn-add" Text="VIew Report" 
+            onclick="Button1_Click" />&nbsp;&nbsp;<asp:Button ID="btnviewimg" runat="server" 
+             CssClass="btn btn-primary btn-add" Text="Related Images" onclick="btnviewimg_Click" /> 
+         <asp:Button ID="btnfile"  CssClass="btn btn-primary btn-add" runat="server" 
+             Text="Related files" onclick="btnfile_Click" />
+        </td>
+    <td align="right" >
+       
+        </td>
+		<td align="right" >
+       
+        </td>
+		<td align="right" >
+       
+        </td>
+ </tr> 
+ 
+ </table>
+ 
+ 
+   </div>
+</div>
+</asp:Content>
+

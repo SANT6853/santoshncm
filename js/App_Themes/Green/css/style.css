@@ -1,0 +1,63 @@
+.navigation{ background:#288112}
+#left_sedebar h2{ background:#288112}
+#left_sedebar ul li a:hover{background:#288112 url( "../images/bullet-arrow-hover.png") no-repeat scroll 13px 14px}
+#nav .MenuLi{background:url(../images/seperator.gif) no-repeat scroll right center transparent;position:relative;margin-right:-1px;}
+#left_sedebar ul li{ background:#2DDB31; border-bottom:1px solid #009 }
+.footer-text{ background:#288112; margin-top: 5px;}
+.breadcrumb a:before{background:#288112}
+.breadcrumb a{background:#288112}
+.breadcrumb a.active, .breadcrumb a:hover{
+	background: #333;
+	background: linear-gradient(#288112, #288112);  
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #288112, #288112); 
+}
+#body-part .middle-part .req h2{background:#288112}
+#body-part .middle-part .req .readmore a{background:#288112}
+#body-part .middle-part .req .readmore a:hover{background:#2DDB31}
+#body-part .welcome-part .welcome-content h2{color:#288112}
+#body-part .welcome-part .director-message h2{ color:#288112;}
+#body-part .welcome-part .director-message .readmore a{  background: #288112;}
+#body-part .welcome-part .director-message .readmore a:hover{ background: #2DDB31;}
+#body-part .welcome-part .welcome-content .readmore a{  background: #288112;}
+#body-part .welcome-part .welcome-content .readmore a:hover{ background: #2DDB31;}
+.visitor-counter, .footer-text-tech-powerd, .media-annoucement{color:#288112;}
+#nav .MenuLi ul{border: 1px solid #006600;}
+#nav .MenuLi ul li a{background:#31A637 !important; border-bottom: 1px solid #006600;}
+#nav .MenuLi .menuFirstNode:hover, #nav .MenuLi.hover .menuFirstNode{background:#B1DA9E;}
+.logo-part h1{color:#288112;}
+.navigation-bg {
+    width: 100%;
+    float: left;
+    background: #288112;
+}
+.sf-menu li {
+    background-image: url(../images/seperator.gif);
+}
+.sf-menu ul li {
+    background: #288112;
+    border-bottom: 1px solid #fff;
+}
+.sf-menu ul ul li {
+    background: #288112;
+}
+.ticker-bg {
+    background: url("../images/ticker-bg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    }
+
+.mt-play {background-color: #e1e1e1;background-image: url("../images/play.png");}
+.mt-pause {background-image: url("../images/pause.png");}
+.mt-prev {background-image: url("../images/prev.png");}
+.mt-next {background-image: url("../images/nxt.png");}
+.button_row input {background:#288112; border:solid 1px #1c78cd; color:#fff; } 
+table tr th { background: #288112 none repeat scroll 0 0;}
+.webinfoman .head {color: #288112;} 
+.webinfoman .details{color: #288112;}
+.welcome-part .req-last h2 { background: #288112 none repeat scroll 0 0;}
+.req-last .readmore a { background: #288112 none repeat scroll 0 0;}
+.footer-text ul li { background: transparent url("../images/seperator.gif") no-repeat scroll right center;}
+.footer-text ul li:hover {  background: #B1DA9E;}
+.footer-text ul li a:hover { color: #000;}
+.search-part input[type="submit"] { background: rgba(0, 0, 0, 0) url("../images/submit_green_new.jpg") no-repeat scroll 0 0;}

@@ -1,0 +1,55 @@
+.navigation{ background:#1571D7}
+#left_sedebar h2{ background:#1571D7}
+#left_sedebar ul li a:hover{background:#105aac url( "../images/bullet-arrow-hover.png") no-repeat scroll 13px 14px}
+#nav .MenuLi{background:url(../images/seperator.gif) no-repeat scroll right center transparent;position:relative;margin-right:-1px;}
+#left_sedebar ul li{ background:#1571d7; border-bottom:1px solid #009 }
+.footer-text{ background:#1571D7}
+.breadcrumb a:before{background:#1571D7}
+.breadcrumb a{background:#1571D7}
+.breadcrumb a.active, .breadcrumb a:hover{
+	background: #333;
+	background: linear-gradient(#1571D7, #1571D7);  
+}
+.breadcrumb a.active:after, .breadcrumb a:hover:after {
+	background: #333;
+	background: linear-gradient(135deg, #1571D7, #1571D7); 
+}
+
+#body-part .middle-part .req h2{background:#1571D7}
+#body-part .middle-part .req .readmore a{background:#1571D7}
+#body-part .middle-part .req .readmore a:hover{background:#58AFDA}
+#body-part .welcome-part .welcome-content h2{color:#1571D7}
+#body-part .welcome-part .director-message h2{ color:#1571D7;}
+#body-part .welcome-part .director-message .readmore a{  background: #1571D7;}
+#body-part .welcome-part .director-message .readmore a:hover{ background: #58AFDA;}
+#body-part .welcome-part .welcome-content .readmore a{ background: #1571D7;}
+#body-part .welcome-part .welcome-content .readmore a:hover{ background: #58AFDA;}
+.visitor-counter, .footer-text-tech-powerd, .media-annoucement{color:#1571D7;}
+#nav .MenuLi ul{border: 1px solid #000099;}
+#nav .MenuLi ul li a{background:#58AFDA !important; border-bottom: 1px solid #000099;}
+
+
+.logo-part h1{color:#1571D7;}
+
+.ticker-bg {
+    background: url("../images/ticker-bg.jpg") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+    }
+
+.mt-play {background-color: #e1e1e1;background-image: url("../images/play.png");}
+.mt-pause {background-image: url("../images/pause.png");}
+.mt-prev {background-image: url("../images/prev.png");}
+.mt-next {background-image: url("../images/nxt.png");}
+.button_row input {background:#1571d7; border:solid 1px #1c78cd; color:#fff; } 
+table tr th { background: #1571D7 none repeat scroll 0 0; border-right: 1px solid #708fff;}
+.footer-text ul li {
+    border-right: 1px solid #264ffc;
+}
+.welcome-part .req-last h2{ background:#1571D7;}
+.req-last .readmore a:hover{ background: #58afda;}
+.webinfoman .head {color: #1571d7;} 
+.webinfoman .details{color: #1571d7;}
+.search-part input[type="submit"]{background:url(../images/submit-blue.jpg) no-repeat; }
+
+
+
+

@@ -1,0 +1,5 @@
+http://adminui-v1.0.bittyfox.com/default/red/layout_menu_light.html
+
+chart
+
+http://fiddle.jshell.net/beehe4eg/show/

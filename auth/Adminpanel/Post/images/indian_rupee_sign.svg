@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.0//EN' 'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg fill-opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" color-rendering="auto" color-interpolation="auto" text-rendering="auto" stroke="black" stroke-linecap="square" stroke-miterlimit="10" shape-rendering="auto" stroke-opacity="1" fill="black" stroke-dasharray="none" font-weight="normal" stroke-width="1" xmlns="http://www.w3.org/2000/svg" font-family="&apos;Dialog&apos;" font-style="normal" stroke-linejoin="miter" font-size="12" stroke-dashoffset="0" image-rendering="auto">
+  <!--Unicode Character 'INDIAN RUPEE SIGN' (U+20B9)-->
+  <defs id="genericDefs" />
+  <g>
+    <g>
+      <path d="M14.9062 142.5938 L22.6406 125.2969 L168.6094 125.2969 L160.875 142.5938 L111.0938 142.5938 Q122.2031 153.5625 125.1562 171.7031 L168.6094 171.7031 L160.875 189 L126.2812 189 Q125.5781 206.7188 117 218.6719 Q107.8594 231.75 90.2812 236.8125 Q99.4219 239.9062 108 250.0312 Q116.2969 259.5938 125.4375 277.875 L154.2656 335.25 L123.75 335.25 L96.8906 281.3906 Q86.3438 260.1562 76.7812 253.4062 Q66.9375 246.5156 50.0625 246.5156 L19.125 246.5156 L19.125 223.1719 L54.8438 223.1719 Q75.375 223.1719 85.7812 213.75 Q95.3438 205.0312 96.1875 189 L14.9062 189 L22.6406 171.7031 L94.6406 171.7031 Q92.1094 162.2812 85.7812 154.9688 Q75.375 142.5938 54.8438 142.5938 L14.9062 142.5938 Z" stroke="none" />
+    </g>
+  </g>
+</svg>

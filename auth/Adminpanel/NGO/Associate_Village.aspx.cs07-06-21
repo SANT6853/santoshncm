@@ -1,0 +1,105 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using NCM.DAL;
+
+public partial class auth_Adminpanel_NGO_Associate_Village : System.Web.UI.Page
+{
+    Associate_Village entity = new Associate_Village();
+    NgoBal obj_bal = new NgoBal();
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["User_Id"] == null)
+        {
+            Response.Redirect(ResolveUrl("~/Home.aspx"), true);
+
+        }
+        if (!IsPostBack)
+        {
+            filldropedownngo(Convert.ToInt32(Session["PermissionState"]));
+            filldropedownvillage();
+        }
+    }
+    public void filldropedownngo(int stateid)
+    {
+        ddlngo.Items.Clear();
+        DataTable dt = NgoDal.binddropedownngo(stateid);
+        if (dt.Rows.Count > 0)
+        {
+            ddlngo.DataSource = dt;
+            ddlngo.DataTextField = "name";
+            ddlngo.DataValueField = "id";
+            ddlngo.DataBind();
+            ddlngo.Items.Insert(0, new ListItem("Select", "0"));
+        }
+    }
+    public void filldropedownvillage()
+    {
+        ddlvillage.Items.Clear();
+        DataTable dt = NgoDal.Proc_Get_All_Villages(Convert.ToInt32(Session["User_Id"]));
+        if (dt.Rows.Count > 0)
+        {
+            ddlvillage.DataSource = dt;
+            ddlvillage.DataTextField = "VILL_NM";
+            ddlvillage.DataValueField = "VILL_ID";
+            ddlvillage.DataBind();
+            ddlvillage.Items.Insert(0, new ListItem("Select", "0"));
+        }
+    }
+
+    protected void btnsubmit_Click(object sender, EventArgs e)
+    {
+
+        entity.villageid = Int32.Parse(ddlvillage.SelectedValue);
+        entity.amount = double.Parse(txtamount.Text);
+        entity.work_done_by_ngo = txtworkdone.Text;
+        entity.UserID = Convert.ToInt32(Session["User_Id"]);
+        int count = ddlngo.Items.Count;
+        if (count > 0)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                if (ddlngo.Items[i].Selected)
+                {
+                    entity.ngoid = Int32.Parse(ddlngo.Items[i].Value);
+                    int j = obj_bal.Associate_Village(entity);
+                    //if (j > 0)
+                    //{
+                       
+                    //}
+                    
+                }
+            }
+//reset();
+        }
+
+        lblmsg.Text = "Record Inserted Successfully";
+        lblmsg.ForeColor = System.Drawing.Color.Green;
+        Session["msg"] = "Record Inserted Successfully.";
+        Session["BackUrl"] = "~/Auth/AdminPanel/Village/Village_Management.aspx";
+        Response.Redirect("~/Auth/AdminPanel/ConfirmationPage.aspx");
+    }
+    protected void btnreset_Click(object sender, EventArgs e)
+    {
+        reset();
+    }
+    public void reset()
+    {
+        ddlvillage.SelectedValue = "0";
+        ddlngo.SelectedValue = "0";
+        txtamount.Text = "";
+        txtworkdone.Text = "";
+
+    }
+    protected void btnback_Click(object sender, EventArgs e)
+    {
+        Response.Redirect(ResolveUrl("~/AUTH/adminpanel/VILLAGE/Village_Management.aspx"));
+    }
+}

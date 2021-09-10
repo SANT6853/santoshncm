@@ -1,0 +1,199 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Mainsite.master.cs" Inherits="Mainsite" %>
+<%--<%@ Register Src="~/UserControl/AceesblityBar.ascx" TagName="Acess" TagPrefix="Bar" %>--%>
+<%@ Register Src="UserControl/TopUserControl.ascx" TagName="TopMenu" TagPrefix="uc1" %>
+<%@ Register Src="UserControl/footer.ascx" TagName="footMenu" TagPrefix="uc2" %>
+<%@ Register Src="UserControl/LogoBanner.ascx" TagName="LogoBanner" TagPrefix="UcLogBanner" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%--<%@ Register Src="UserControl/Accessblity.ascx" TagName="Acsessability" TagPrefix="Ac" %>--%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" >
+<link rel="apple-touch-icon" sizes="57x57" href="images/fav/apple-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="images/fav/apple-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="images/fav/apple-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="images/fav/apple-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="images/fav/apple-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="images/fav/apple-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="images/fav/apple-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="images/fav/apple-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/fav/apple-icon-180x180.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="images/fav/android-icon-192x192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/fav/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="images/fav/favicon-96x96.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="images/fav/favicon-16x16.png" />
+<link rel="manifest" href="/manifest.json" />
+<meta name="msapplication-TileColor" content="#ffffff"/>
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+<meta name="theme-color" content="#ffffff">
+<script src="<%#ResolveUrl("~/js/jquery.min.js") %>" type="text/javascript"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/print.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href='<%#ResolveUrl("css/font-awesome.min.css")%>' rel="stylesheet" type="text/css" />
+<link href='<%#ResolveUrl("css/meanmenu.css")%>' rel="stylesheet" type="text/css" />
+<link rel="alternate stylesheet" href="<%#ResolveUrl("css/contrast.css")%>" media="screen" title="contrast" />
+<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body id="fontSize" class="bigfacebg">
+<noscript>
+"Javascript is a standard programming language that is included to provide interactive features, kindly enable javascript in your browser."
+</noscript>
+<form id="form1" runat="server">
+  <cc1:ToolkitScriptManager ID="toolkitmangNTCA" runat="server" />
+  <%-- <Bar:Acess ID="Acessiblity" runat="server" />--%>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="top_access hidden-xs">
+            <div class="pull-right back_arrow">
+              <ul id="example" class="top_accessibility">
+                <li class="pd4">
+                  <input type="text" class="search_top" placeholder="Enter Keyword!"/>
+                  <button type="submit" class="searchbtn" name="search"><i class="fa fa-search"></i></button>
+                </li>
+                <li><a href="#content"> <img src='<%=ResolveUrl("images/skip.png") %>' alt="Skip To Content" title="Skip To Content"></a></li>
+                <li class="drop_menu"><a href=""> <img src='<%=ResolveUrl("images/handicape.png") %>' alt="Handicape" title="Handicape"></a>
+                  <ul class="drop_content">
+                    <li><a href="javascript:void(0)" onClick="set_font_size('decrease')"> <img src='<%=ResolveUrl("images/decrease-font-size.png") %>' alt="Decrease Font Size" title="Decrease Font Size"></a></li>
+                    <li><a href="javascript:void(0)" onclick="set_font_size('')"> <img src='<%=ResolveUrl("images/standard-view.png") %>' alt="Normal Font" title="Normal Font"></a></li>
+                    <li><a href="javascript:void(0)" onclick="set_font_size('increase')"> <img src='<%=ResolveUrl("images/increase-text-size.png") %>' alt="Increase Text Size" title="Increase Text Size"></a></li>
+                    <li><a href="javascript:void(0)" onclick="setActiveStyleSheet('contrast'); return false;"> <img src='<%=ResolveUrl("images/high-contrast.png") %>' alt="High Contrast" title="High Contrast"></a></li>
+                    <li><a href="javascript:void(0)" onclick="setActiveStyleSheet('style'); return false;"> <img src='<%=ResolveUrl("images/standard-view.png") %>' alt="Standard View" title="Standard View"></a></li>
+                  </ul>
+                </li>
+                <li class="drop_menu"><a href=""><a href=""> <img src='<%=ResolveUrl("images/ico-social.png") %>' alt="Social Icon" title="Social Icon"></a>
+                  <ul class="drop_content">
+                    <li><a href=""> <img src='<%=ResolveUrl("images/facebook-icons.jpg") %>' alt="Facebook" title="Facebook"></a></li>
+                    <li><a href=""> <img src='<%=ResolveUrl("images/twitter.jpg") %>' alt="Twitter" title="Twitter"></a></li>
+                    <li><a href=""> <img src='<%=ResolveUrl("images/you-tube.jpg") %>' alt="you-tube" title="you-tube"></a></li>
+                  </ul>
+                </li>
+                <li><a href="#"> <img src='<%=ResolveUrl("images/sitemap.png") %>' alt="Sitemap" title="Sitemap"></a></li>
+                <li><a href="#">हिंदी</a></li>
+                <li><a href="<%=ResolveUrl("auth/adminpanel/Login.aspx") %>"> <span class="glyphicon glyphicon-lock"></span> Click here to login NTCA</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-12 res_textcenter">
+            <div class="ntcalogo col-md-1"> <a href='<%=ResolveUrl("~/Home.aspx") %>'> <img src='<%=ResolveUrl("images/NTCA-logo.png") %>' alt="NTCA-logo" title="NTCA-logo" width="110px;"/> </a> </div>
+            <div class="slogan col-md-9"> <a href='<%=ResolveUrl("~/Home.aspx") %>'>
+              <%--<%=ResolveUrl("~/index.aspx") %> <uc1:TopMenu ID="Top1" WebsiteID="1" runat="server" />--%>
+              <UcLogBanner:LogoBanner ID="UcLogoBanneriD" runat="server" />
+              </a>
+              <%-- <img src='<%=ResolveUrl("images/logontca.png") %>' alt="NTCA" title="National Tiger Conservation Authority,Government of India" class="logo"></a>--%>
+            </div>
+            <div class="ext col-md-3"> <img src='<%=ResolveUrl("images/elum.png") %>' alt="Indian Emblem" title="Indian Emblem Logo" height="90px;"/> <img src='<%=ResolveUrl("images/tree.png") %>' alt="Hariyali" title="Hariyali Logo" height="90px;"/> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section>
+    <div class="mean-container"></div>
+    <div id="main-nav" class="navigation-bg">
+      <div class="container">
+        <nav>
+          <ul class="clearfix sf-menu sf-js-enabled sf-arrows sf-arrows1" id="example1">
+            <uc1:TopMenu ID="Top1" WebsiteID="1" runat="server" />
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+  <asp:ContentPlaceHolder ID="contentBanner" runat="server"> </asp:ContentPlaceHolder>
+  
+  <!--start of breadcrumb and print-->
+  
+  <div class=" container background-white">
+    <div class="btn-group btn-breadcrumb breadcrumb-success transprnt-bg"> 
+      <!-- <a href='<%=ResolveUrl("Home.aspx") %>' class="btn btn-success"><i class="glyphicon glyphicon-home"></i></a>           
+            <div class="btn btn-primary"><b>Active Page</b></div>-->
+      <div class="visible-lg-block">
+        <div id="DivPrintHideShow" runat="server" class="btn btn-warning btn-derecha"> <a onclick="javascript: window.print()" title="Print" href="javascript: void(0)" class="pull-right">
+          <p class="glyphicon glyphicon-print  print"></p>
+          </a> </div>
+      </div>
+    </div>
+  </div>
+  <!--end of breadcrum-->
+  
+  <asp:ContentPlaceHolder ID="contentbody" runat="server">
+    <%--start middle content--%>
+    <section class="why_relocation">
+      <div class="container">
+        <div class="row">
+          <asp:Literal ID="LtrCntMiddleContent" runat="server"></asp:Literal>
+        </div>
+      </div>
+    </section>
+    <%--end middle content--%>
+  </asp:ContentPlaceHolder>
+  <section class="logo_section">
+    <div class="container">
+      <div class="row">
+        <ul class="list_logo">
+          <marquee>
+          <li>
+            <asp:Literal ID="LtrBottomMarquee" runat="server"></asp:Literal>
+          </li>
+          </marquee>
+        </ul>
+      </div>
+    </div>
+    <div class="devider"></div>
+    <div class="container">
+      <div class="row">
+        <ul class="footer_list1">
+          <uc2:footMenu ID="footMenu1" Websiteid="1" runat="server" />
+          <%--<li><a href="#" class="read_morea">Home</a></li>
+                        <li><a href="feedback.aspx" class="read_morea">Feedback</a></li>
+                        <li><a href="#" class="read_morea">Term & conditions</a></li>
+                        <li><a href="#" class="read_morea">Policy</a></li>--%>
+        </ul>
+        <p class="text-center">This Website belongs to The National Tiger Conservation Authority, Government of India.</p>
+        <%-- <p class="text-center">Developed by NetCreativeMind Solutions Pvt Ltd.</p>--%>
+      </div>
+    </div>
+  </section>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script> 
+  <script src="js/superfish.js" type="text/javascript"></script> 
+  <script src="<%= ResolveUrl("~/js/styleswitcher.js")%>"></script>
+
+	<script>// initialise plugins
+
+	if(getCookie("mysheet") == "contrast" ) {
+
+	setStylesheet("change") ;
+
+	}
+
+	else if(getCookie("mysheet") == "style" ) {
+
+	setStylesheet("style") ;
+
+	}
+
+	else   {
+
+	setStylesheet("");
+
+	}
+	</script>
+	<script src="<%= ResolveUrl("~/js/font-size.js")%>"></script>
+  <script src="js/jquery.meanmenu.js" type="text/javascript"></script> 
+  <script src="js/customNews.js" type="text/javascript"></script> 
+  <script type="text/jscript">
+
+
+            $("marquee").hover(function () {
+                this.stop();
+            }, function () {
+                this.start();
+            });
+        </script>
+</form>
+</body>
+</html>

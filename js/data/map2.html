@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<HTML>
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<head runat="server">
+<title></title>
+</head>
+<body>
+<div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+<script src="https://code.highcharts.com/maps/modules/data.js"></script>
+<script src="https://code.highcharts.com/maps/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+<script src="https://code.highcharts.com/mapdata/countries/in/in-all.js"></script>
+
+<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<div id="container" style="height: 500px; min-width: 310px; max-width: 800px; margin: 0 auto"></div>
+</div>
+<div>
+<script type="text/javascript">
+	
+/*
+TODO:
+- Check data labels after drilling. Label rank? New positions?
+*/
+
+var data = Highcharts.geojson(Highcharts.maps['countries/in/in-all']),
+   
+    separators = Highcharts.geojson(Highcharts.maps['countries/in/in-all'], 'mapline'),
+
+    small = $('#container').width() < 400;
+
+// Set drilldown pointers
+  
+$.each(data, function (i) {
+
+    this.drilldown = this.properties['hc-key'];
+    this.value = i; // Non-random bogin data
+
+});
+// Instantiate the map
+Highcharts.mapChart('container', {
+    chart: {
+        events: {
+            drilldown: function (e) {
+                try{
+                if (!e.seriesOptions) {
+                    var chart = this,
+                        mapKey = e.point.drilldown;
+                        // Handle error, the timeout is cleared on success
+                        fail = setTimeout(function () {
+                            if (!Highcharts.maps[mapKey]) {
+                                chart.showLoading('<i class="icon-frown"></i> Failed loading ' + e.point.name);
+                                fail = setTimeout(function () {
+                                    chart.hideLoading();
+                                }, 1000);
+                            }
+                        }, 3000);
+
+                    // Show the spinner
+                    chart.showLoading('<i class="icon-spinner icon-spin icon-3x"></i>'); // Font Awesome spinner
+
+                    // Load the drilldown map
+                    $.getScript(mapKey+'.js', function () {
+                        data = Highcharts.geojson(Highcharts.maps[mapKey]);
+                        // Set a non-random bogus value
+//                        if(data[0].name=="Rajasthan")
+//                        {
+//                            data[0].url ="www.google.co.in";
+//                        }
+                        $.each(data, function (i) {
+                            this.value = i;
+                        });
+                        // Hide loading and add series
+                        chart.hideLoading();
+                        clearTimeout(fail);
+                        chart.addSeriesAsDrilldown(e.point, {
+                            name: e.point.name,
+                            data: data,
+                            dataLabels: {
+                                enabled: true,
+                                format: '{point.name}'
+                            }
+                        });
+                    });
+                }
+
+                this.setTitle(null, { text: e.point.name });
+                
+                }catch(err){
+                    alert(err)
+                }
+            },
+            drillup: function () {
+                this.setTitle(null, { text: '' });
+            }
+        }
+    },
+
+    title: {
+        text: 'Highcharts Map Drilldown'
+    },
+
+    subtitle: {
+        text: '',
+        floating: true,
+        align: 'right',
+        y: 50,
+        style: {
+            fontSize: '16px'
+        }
+    },
+
+    legend: small ? {} : {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    colorAxis: {
+        min: 0,
+        minColor: '#B2DBEA',
+        maxColor: '#0088BB'
+    },
+
+    mapNavigation: {
+        enabled: true,
+        buttonOptions: {
+            verticalAlign: 'bottom'
+        }
+    },
+
+    plotOptions: {
+        map: {
+            states: {
+                hover: {
+                    color: '#0077aa'
+                }
+            }
+        }
+    },
+    plotOptions:{
+        	series:{
+            	point:{
+                	events:{
+                    	click: function(){
+                            console.log(this.name);
+                            console.log("id is :"+this.properties.ID_1);
+                           if(typeof this.properties.ID_1 != 'undefined'){
+                           console.log(typeof this.properties.ID_1);
+                           if(this.properties.ID_1=='29'){
+                                window.location.href="./content/citiescovered.php?statecatgory=26";
+                           }else if(this.properties.ID_1=='2'){window.location.href="./content/citiescovered.php?statecatgory=2";}
+                           else if(this.properties.ID_1=='3'){window.location.href="./content/citiescovered.php?statecatgory=3";}
+                           else if(this.properties.ID_1=='4'){window.location.href="./content/citiescovered.php?statecatgory=4";}
+                           else if(this.properties.ID_1=='5'){window.location.href="./content/citiescovered.php?statecatgory=5";}
+                           else if(this.properties.ID_1=='7'){window.location.href="./content/citiescovered.php?statecatgory=7";}
+                           else if(this.properties.ID_1=='11'){window.location.href="./content/citiescovered.php?statecatgory=10";}
+                           else if(this.properties.ID_1=='12'){window.location.href="./content/citiescovered.php?statecatgory=11";}
+                           else if(this.properties.ID_1=='13'){window.location.href="./content/citiescovered.php?statecatgory=12";}
+                           else if(this.properties.ID_1=='14'){window.location.href="./content/citiescovered.php?statecatgory=13";}
+                           else if(this.properties.ID_1=='15'){window.location.href="./content/citiescovered.php?statecatgory=14";}
+                           else if(this.properties.ID_1=='16'){window.location.href="./content/citiescovered.php?statecatgory=15";}
+                           else if(this.properties.ID_1=='18'){window.location.href="./content/citiescovered.php?statecatgory=17";}
+                           else if(this.properties.ID_1=='17'){window.location.href="./content/citiescovered.php?statecatgory=16";}
+                           else if(this.properties.ID_1=='20'){window.location.href="./content/citiescovered.php?statecatgory=19";}
+                           else if(this.properties.ID_1=='21'){window.location.href="./content/citiescovered.php?statecatgory=20";}
+                           else if(this.properties.ID_1=='22'){window.location.href="./content/citiescovered.php?statecatgory=21";}
+                           else if(this.properties.ID_1=='23'){window.location.href="./content/citiescovered.php?statecatgory=22";}
+                           else if(this.properties.ID_1=='24'){window.location.href="./content/citiescovered.php?statecatgory=34";}
+                           else if(this.properties.ID_1=='25'){window.location.href="./content/citiescovered.php?statecatgory=35";}
+                           else if(this.properties.ID_1=='26'){window.location.href="./content/citiescovered.php?statecatgory=23";}
+                           else if(this.properties.ID_1=='27'){window.location.href="./content/citiescovered.php?statecatgory=24";}
+                           else if(this.properties.ID_1=='28'){window.location.href="./content/citiescovered.php?statecatgory=25";}
+                           else if(this.properties.ID_1=='30'){window.location.href="./content/citiescovered.php?statecatgory=27";}
+                           else if(this.properties.ID_1=='31'){window.location.href="./content/citiescovered.php?statecatgory=28";}
+                           else if(this.properties.ID_1 == '32'){alert(this.properties.ID_1);
+                            window.location.href="./content/citiescovered.php?statecatgory=29";
+                           }
+                           else if(this.properties.ID_1 == '33'){alert(this.properties.ID_1);
+                            window.location.href="./content/citiescovered.php?statecatgory=31";
+                           }else if(this.properties.ID_1 == '35'){alert(this.properties.ID_1);
+                            window.location.href="./content/citiescovered.php?statecatgory=32";
+                           }
+                        }
+                    }
+                }
+            }
+        }
+        },
+    series: [{
+        data: data,
+        name: 'India',
+        dataLabels: {
+            enabled: true,
+            format: '{point.properties.postal-code}'
+        }
+    }, {
+        type: 'mapline',
+        data: separators,
+        color: 'silver',
+        enableMouseTracking: false,
+        animation: {
+            duration: 500
+        }
+    }],
+
+    drilldown: {
+        activeDataLabelStyle: {
+            color: '#FFFFFF',
+            textDecoration: 'none',
+            textOutline: '1px #000000'
+        },
+        drillUpButton: {
+            relativeTo: 'spacingBox',
+            position: {
+                x: 0,
+                y: 60
+            }
+        }
+    }
+});
+
+</script>  </div>
+</body>
+</html>
